@@ -18,6 +18,15 @@ const fps = 30;
   await page.waitForTimeout(200);
   const dur = await page.evaluate(() => window.DURATION);
 
+  // portada para Metricool: la diseñada (spec.cover) o, si no hay, un frame del gancho
+  async function renderCover(pg, file) {
+    await pg.evaluate((x) => window.render(x), spec.coverAt || 2.2);
+    await pg.evaluate(() => window.renderCover());
+    await pg.screenshot({ path: file, type: 'jpeg', quality: 90 });
+  }
+
+  if (flag === '--cover') { await renderCover(page, out); console.log('cover', out); await browser.close(); return; }
+
   if (flag === '--probe') {
     const times = (probe || '').split(',').filter(Boolean).map(Number);
     for (const t of times) {
@@ -44,9 +53,7 @@ const fps = 30;
   }
   ff.stdin.end();
   await new Promise((r) => ff.on('close', r));
-  // portada (frame del gancho) para Metricool
-  await page.evaluate((x) => window.render(x), spec.coverAt || 1.6);
-  await page.screenshot({ path: out.replace(/\.mp4$/, '-cover.jpg'), type: 'jpeg', quality: 90 });
+  await renderCover(page, out.replace(/\.mp4$/, '-cover.jpg'));
   console.log('ok', out, dur.toFixed(1) + 's');
   await browser.close();
 })();

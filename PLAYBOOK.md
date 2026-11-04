@@ -21,7 +21,47 @@ y lo programa en Metricool (Instagram Reel + TikTok) para el día siguiente.
 3. **Giro hacia el producto** (escena `chips` o `profile` o `text`): qué resuelve Vive Conmigo.
 4. **CTA** (escena `cta`, ~3.4 s): título corto + vive-conmigo.es. El `foot` puede pedir comentarios.
 
+## Objetivo: VISUALIZACIONES y REACCIÓN
+Cada vídeo tiene que provocar algo: risa, "esto me pasó", ganas de etiquetar a un amigo o ganas de
+opinar en comentarios. Mezcla de contenidos (en cada bloque de ~6 vídeos):
+- ~3 de **humor / identificación** (situaciones de piso que todo el mundo ha vivido).
+- ~2 de **debate / tema sensible** que divide opiniones y genera comentarios (ver lista abajo).
+  Se plantea como pregunta, sin insultar ni ridiculizar a nadie, sin estereotipos de género, origen,
+  religión ni orientación. Polémica de convivencia, no de grupos de personas.
+- ~1 **útil / producto** (consejos, cómo funciona la compatibilidad, inquilino que busca compi).
+El CTA de los de debate pide opinar ("Comenta A o B", "¿Estás de acuerdo?", "Etiqueta a tu compi").
+
+### Banco de temas de debate (rotar, no repetir)
+- La pareja que se queda a dormir casi todos los días: ¿debe pagar?
+- La habitación grande: ¿paga lo mismo o más?
+- ¿Dividir la luz a partes iguales si uno trabaja desde casa todo el día?
+- Fumar en el balcón: ¿cuenta como fumar en casa?
+- Compartir piso con 30+ años: ¿normal hoy en día o fracaso? (precio del alquiler)
+- Mixto o solo chicos / solo chicas: ¿preferencia o problema? (sin estereotipos, cada uno elige)
+- ¿Estudiantes con trabajadores: buena o mala idea?
+- Fiestas en casa entre semana: ¿cuántas son demasiadas?
+- Mascotas en piso compartido: ¿sí o no?
+- Hacer la compra común o cada uno lo suyo.
+- El compi que nunca está: ¿el mejor compi del mundo?
+- ¿Es de mala persona no querer vivir con alguien que fuma?
+- Visitas que se quedan una semana. Música sin cascos. La nevera "comunal".
+- Caseros que piden 2-3 meses de fianza + mes por adelantado (sin dar cifras inventadas como datos).
+Añade temas nuevos al banco cuando se te ocurran.
+
+## Variedad (obligatoria)
+Antes de escribir el spec, lee las últimas 6 líneas del LOG y cambia a la vez:
+- **Formato** (no repetir el del vídeo anterior; no más de 2 veces en los últimos 6).
+- **Tipo de escena principal** (`item`, `chat`, `versus`, `poll`, `quote`, `checklist`, `profile`, `text`).
+- **Color del gancho** (tema distinto al del vídeo anterior) y **duración** (alternar cortos de 10-15 s
+  con otros de 20-28 s; los cortos con una sola idea suelen retener mejor).
+- **Estilo de gancho**: pregunta directa, "POV:", "Opinión impopular:", "Nadie habla de…",
+  "Cosas que…", "Si tu compi hace esto…", "A o B", "Esto me pasó…". Nunca el mismo dos veces seguidas.
+- El CTA no siempre igual: variar título y `foot`.
+
 ## Formatos (rotar, no repetir el mismo dos veces seguidas)
+- **Opinión impopular** (`quote` + `poll` o `text`) — de debate.
+- **A o B** (`poll`) — de debate, pide comentar A o B.
+- **Checklist** antes de alquilar / lo que tiene que tener tu compi ideal (`checklist`).
 - **Red flags / señales** (escenas `item` numeradas + barra de progreso).
 - **Chat** (escena `chat`): conversación de visita de piso o de grupo de WhatsApp del piso.
 - **Expectativa vs realidad** (`versus`).
@@ -42,7 +82,16 @@ En cualquier texto, `*palabra*` = cursiva en color de acento.
 - `versus`: `{ title, left:{label, items[]}, right:{label, items[]} }` — 2–3 items por lado.
 - `profile`: `{ title, name, tag, pct, rows:[{good:true|false, k, v}] }`
 - `chips`: `{ label?, title, chips[], foot? }` — 3–6 chips.
+- `poll`: `{ label?, title, options:[A, B], foot? }` — opción A y B grandes + "Comenta A o B".
+- `quote`: `{ label? (por defecto "Opinión impopular"), title, sub? }` — frase polémica grande.
+- `checklist`: `{ label?, title, rows:[{t, ok?:false}] }` — 3-5 filas con ✓ o ✗.
 - `cta`: `{ title, foot? }`
+
+### Portada (OBLIGATORIA)
+`cover: { kicker, title, theme, size? }` en la raíz del spec. Es lo que se ve en el perfil, así que
+tiene que leerse de un vistazo: kicker corto (POV, Red flags, Opinión impopular, A o B, Checklist…),
+título de 4-9 palabras con una palabra en `*cursiva*`, tema de color distinto al de la portada anterior.
+`render.js` la genera como `-cover.jpg` (también se puede sacar sola con `--cover`). MÍRALA antes de publicar.
 Cada escena lleva `dur` (s). Reglas de duración: item 2.3, chat ~1 s por mensaje + 1, versus 4,
 profile 4.4, chips 4, cta 3.4. Las frases deben caber en ~3 líneas (máx. ~40 caracteres por línea a 104 px).
 

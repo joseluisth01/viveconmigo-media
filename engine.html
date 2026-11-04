@@ -157,6 +157,40 @@ SPEC.scenes.forEach((s, idx) => {
       if (s.foot) add(`<div style="font-size:50px;font-weight:600">${rich(s.foot, th.accent)}</div>`, 'rise', t, { dist: 40 });
       break;
     }
+    case 'poll': {
+      sec.style.gap = '48px';
+      if (s.label) { add(`<div class="label" style="color:${th.accent}">${esc(s.label)}</div>`, 'rise', t, { dist: 40 }); t += 0.25; }
+      add(`<div class="serif" style="font-size:${s.size || 96}px;line-height:1.05">${rich(s.title, th.accent)}</div>`, 'rise', t); t += 0.8;
+      const opts = [['A', C.terra, C.cream], ['B', C.olive, C.cream]];
+      s.options.forEach((o, k) => {
+        const [letter, bg, fg] = opts[k];
+        add(`<div style="display:flex;align-items:center;gap:36px;background:${bg};color:${fg};border-radius:40px;padding:40px 44px">
+          <span class="serif" style="font-size:110px;line-height:.9;font-weight:600;letter-spacing:-2px">${letter}</span>
+          <span style="font-size:46px;line-height:1.25;font-weight:500">${rich(o, C.butter)}</span></div>`, 'pop', t + k * 0.6, { rot: k ? 3 : -3 });
+      });
+      t += 1.5;
+      add(`<div style="font-size:48px;font-weight:600">${rich(s.foot || 'Comenta *A* o *B* 👇', th.accent)}</div>`, 'rise', t, { dist: 40 });
+      break;
+    }
+    case 'quote': {
+      sec.style.gap = '50px';
+      add(`<div class="label" style="color:${th.accent}">${esc(s.label || 'Opinión impopular')}</div>`, 'rise', t, { dist: 40 }); t += 0.3;
+      add(`<div style="border-left:16px solid ${th.accent};padding-left:44px"><div class="serif" style="font-size:${s.size || 104}px;line-height:1.06">${rich(s.title, th.accent)}</div></div>`, 'slide', t); t += 1.3;
+      if (s.sub) add(`<div style="font-size:50px;line-height:1.3;color:${th.soft}">${rich(s.sub, th.accent)}</div>`, 'rise', t, { dist: 40 });
+      break;
+    }
+    case 'checklist': {
+      sec.style.gap = '34px';
+      if (s.label) { add(`<div class="label" style="color:${th.accent}">${esc(s.label)}</div>`, 'rise', t, { dist: 40 }); t += 0.25; }
+      add(`<div class="serif" style="font-size:${s.size || 92}px;line-height:1.06;margin-bottom:14px">${rich(s.title, th.accent)}</div>`, 'rise', t); t += 0.7;
+      s.rows.forEach((r, k) => {
+        const ok = r.ok !== false;
+        const icon = ok ? `<svg width="56" height="56" viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="${C.olive}"/><path d="M16 29 L25 38 L41 19" stroke="${C.cream}" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+                        : `<svg width="56" height="56" viewBox="0 0 56 56"><circle cx="28" cy="28" r="28" fill="${C.rust}"/><path d="M19 19 L37 37 M37 19 L19 37" stroke="${C.cream}" stroke-width="6" stroke-linecap="round"/></svg>`;
+        add(`<div style="display:flex;align-items:center;gap:30px"><span style="flex-shrink:0;display:flex">${icon}</span><span style="font-size:48px;line-height:1.25;font-weight:500">${rich(r.t, th.accent)}</span></div>`, 'pop', t + k * (s.rowStep || 0.55), { rot: -3 });
+      });
+      break;
+    }
     case 'cta': {
       sec.style.alignItems = 'center'; sec.style.textAlign = 'center'; sec.style.padding = '200px 96px 380px'; sec.style.gap = '60px';
       add(`<img src="assets/logo.png" style="width:240px;height:240px;border-radius:60px">`, 'pop', 0.1);
@@ -193,6 +227,23 @@ window.render = function (t) {
   }
 };
 window.render(0);
+
+/* ---------- Portada diseñada (para el grid de TikTok/Instagram) ----------
+   spec.cover = { title, kicker?, theme?, size? }. El contenido importante queda dentro del
+   recorte 3:4 central (y 240–1680), que es lo que se ve en el perfil. */
+window.renderCover = function () {
+  const cv = SPEC.cover; if (!cv) return false;
+  const th = THEMES[cv.theme || 'terra'];
+  const el = document.createElement('section');
+  el.style.cssText = `position:absolute;inset:0;z-index:10;background:${th.bg};color:${th.fg};display:flex;flex-direction:column;justify-content:center;padding:300px 110px 300px 96px;box-sizing:border-box;gap:56px`;
+  const circle = `<div style="position:absolute;right:-180px;top:180px;width:620px;height:620px;border-radius:50%;background:${th.accent};opacity:.16"></div>`;
+  el.innerHTML = circle +
+    (cv.kicker ? `<div style="position:relative;display:inline-flex;align-self:flex-start;background:${th.fg};color:${th.bg};font-size:40px;font-weight:600;letter-spacing:4px;text-transform:uppercase;padding:18px 32px;border-radius:999px">${esc(cv.kicker)}</div>` : '') +
+    `<div class="serif" style="position:relative;font-size:${cv.size || 138}px;line-height:1.02">${rich(cv.title, th.accent)}</div>` +
+    `<div style="position:relative;display:flex;align-items:center;gap:22px;margin-top:20px"><img src="assets/logo.png" style="width:84px;height:84px;border-radius:22px"><span style="font-size:40px;font-weight:600">vive-conmigo.es</span></div>`;
+  $stage.appendChild(el);
+  return true;
+};
 </script>
 </body>
 </html>
