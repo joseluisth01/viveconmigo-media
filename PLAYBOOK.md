@@ -56,12 +56,17 @@ imágenes antes de renderizar: que no se corte ningún texto y que nada quede fu
   Antes de programar, contar con getScheduledPosts lo ya programado/publicado del mes; si se
   alcanzaría el límite, no programar y avisar.
 - Programar para **el día siguiente** a la mejor hora (getBestTimeToPostByNetwork para tiktok e
-  instagram; elegir la hora con mejor valor conjunto entre 12:00 y 22:00).
+  instagram; normalizar cada red por su máximo, sumar y elegir la mejor hora **entre 17:00 y 21:00**,
+  para que José tenga el día para revisar el vídeo y añadirle música en TikTok si quiere).
 - `media`: URL pública jsDelivr del commit (`https://cdn.jsdelivr.net/gh/<owner>/viveconmigo-media@<sha>/videos/<archivo>.mp4`).
 - `providers`: instagram + tiktok. `instagramData.type = "REEL"`, `showReelOnFeed = true`,
-  `audioConfiguration` con una canción buscada por título (si falla, publicar sin ella).
-  `tiktokData`: público, comentarios/dúo/pegar permitidos, `commercialContentOwnBrand` false.
-  `autoPublish: true`.
+  NO enviar `audioConfiguration` (la cuenta de Instagram no está vinculada a una página de Facebook y
+  la API devuelve "Authorization Error").
+  `tiktokData`: **`title` obligatorio** (frase corta del gancho), público, comentarios/dúo/pegar
+  permitidos, `commercialContentOwnBrand` false, `autoAddMusic` false.
+  `videoThumbnailUrl`: el `-cover.jpg` del mismo commit. `autoPublish: true`.
+- Metricool vuelve a alojar el vídeo (static.metricool.com), así que el enlace de jsDelivr solo tiene
+  que funcionar en el momento de programar. Comprobar con curl que devuelve 200 y video/mp4 antes.
 - Texto: 1–2 frases con pregunta para comentarios + "Link en el perfil." + 4–6 hashtags
   (#pisocompartido #compañerosdepiso #buscopiso #estudiantes #universidad + uno del tema).
 
