@@ -1,0 +1,13 @@
+{
+  "coverAt": 1.6,
+  "scenes": [
+    { "type": "hook", "theme": "cream", "dur": 2.8, "lines": [ { "t": "POV: vas a ver una habitación" }, { "t": "y haces *la pregunta*.", "size": 112, "pop": true } ] },
+    { "type": "chat", "theme": "sand", "dur": 5.4, "label": "Visita al piso", "msgs": [
+      { "from": "them", "t": "Y esta sería tu habitación 😊", "wait": 1.0 },
+      { "from": "me", "t": "Genial. Una cosa… ¿*fumáis* dentro?", "wait": 1.3 },
+      { "from": "them", "t": "Eh… bueno, solo en el salón.", "wait": 1.2 },
+      { "from": "me", "t": "Ah. Vale. *Gracias*." } ] },
+    { "type": "text", "theme": "ink", "dur": 4.2, "gap": 50, "lines": [ { "t": "Con Vive Conmigo lo sabes *antes* de ir.", "size": 100 }, { "t": "Tabaco, horarios, limpieza, visitas… y tu % de compatibilidad con cada compi.", "sans": true, "soft": true, "size": 48, "wait": 0.9 } ] },
+    { "type": "cta", "theme": "terra", "dur": 3.4, "title": "Ahórrate la *visita incómoda*.", "foot": "Gratis · Link en el perfil" }
+  ]
+}

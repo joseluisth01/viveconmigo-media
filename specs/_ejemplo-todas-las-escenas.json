@@ -1,0 +1,12 @@
+{
+  "scenes": [
+    { "type": "hook", "theme": "cream", "dur": 2.6, "flags": 2, "lines": [ { "t": "Lo que preguntas al ver un piso" }, { "t": "vs. lo que *deberías* preguntar", "size": 104 } ] },
+    { "type": "chat", "theme": "sand", "dur": 4, "label": "Visita al piso", "msgs": [ { "from": "them", "t": "¿Qué tal, te gusta la habitación?" }, { "from": "me", "t": "Sí, ¿*fumáis* dentro?" }, { "from": "them", "t": "Bueno… a veces 🙃" } ] },
+    { "type": "item", "theme": "terra", "dur": 2.3, "title": "«Luego lo friego»", "sub": "Spoiler: *nunca* llega." },
+    { "type": "item", "theme": "sand", "dur": 2.3, "title": "Nunca hay papel.", "sub": "Nunca." },
+    { "type": "versus", "theme": "ink", "dur": 4, "title": "Expectativa *vs* realidad", "left": { "label": "En el anuncio", "items": ["Luminoso", "Ambiente tranquilo"] }, "right": { "label": "En la vida real", "items": ["Fiesta el martes", "Platos en el fregadero"] } },
+    { "type": "profile", "theme": "cream", "dur": 4.4, "title": "Mira tu compatibilidad *antes*.", "name": "Marcos, 22", "tag": "ADE · noctámbulo", "pct": 74, "rows": [ { "good": true, "k": "Encajáis:", "v": "limpieza y visitas" }, { "good": false, "k": "A hablar:", "v": "horarios" } ] },
+    { "type": "chips", "theme": "cream", "dur": 4, "label": "En Vive Conmigo", "title": "ves los hábitos del piso *antes* de entrar.", "chips": ["Horarios", "Limpieza", "Tabaco", "Fiestas"], "foot": "+ tu % de compatibilidad." },
+    { "type": "cta", "theme": "terra", "dur": 3.4, "title": "Encuentra con quién *encajas*." }
+  ]
+}
