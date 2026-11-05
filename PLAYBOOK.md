@@ -109,7 +109,7 @@ imágenes antes de renderizar: que no se corte ningún texto y que nada quede fu
   instagram; normalizar cada red por su máximo, sumar y elegir la mejor hora **entre 17:00 y 21:00**,
   para que José tenga el día para revisar el vídeo y añadirle música en TikTok si quiere).
 - `media`: URL pública jsDelivr del commit (`https://cdn.jsdelivr.net/gh/<owner>/viveconmigo-media@<sha>/videos/<archivo>.mp4`).
-- `providers`: instagram + tiktok. `instagramData.type = "REEL"`, `showReelOnFeed = true`,
+- `providers`: instagram + tiktok. `instagramData.type = "REEL"`, **`showReelOnFeed = false`** (José quiere los Reels SOLO en la pestaña de Reels, nunca en la cuadrícula del feed),
   **Música en Instagram (OBLIGATORIA)**: `instagramData.audioConfiguration = {"audioId": "<búsqueda o id>", "audioVolume": 70, "videoVolume": 100}`.
   Desde el 05/11 Instagram está vinculado a la página de Facebook "Vive Conmigo · Pisos compartidos" y funciona.
   Elige una canción en tendencia en España esa semana (búscalo con WebSearch: artículos tipo "audios virales
@@ -119,6 +119,8 @@ imágenes antes de renderizar: que no se corte ningún texto y que nada quede fu
   esa canción (vale `original_sound`). Si no aparece, usa la mejor alternativa de la lista de candidatos.
   No repitas la misma canción que en los 3 vídeos anteriores (apúntala en el LOG).
   Ya usadas: Sunshine Instrumental – Twista, Coming Up Roses – Harry Styles, Housewife (remix) – Tate McRae.
+- **NUNCA** uses updateScheduledPost sobre una publicación a la que José ya le haya puesto música de TikTok
+  a mano (aparece `tiktokData.music` en getScheduledPosts): el conector la borra al actualizar.
 - **Música en TikTok**: el conector no permite elegirla (TikTok solo deja la biblioteca comercial y se pone
   a mano en Metricool). Recuérdaselo a José en el resumen.
   `tiktokData`: **`title` obligatorio** (frase corta del gancho), público, comentarios/dúo/pegar
