@@ -100,7 +100,8 @@ Render: `node render.js specs/AAAA-MM-DD-slug.json videos/AAAA-MM-DD-slug.mp4`
 imágenes antes de renderizar: que no se corte ningún texto y que nada quede fuera de la zona segura.
 
 ## Publicación (Metricool)
-- Marca Metricool: viveconmigoapp (sacar `blogId` y zona horaria con getBrandSettings).
+- Marca Metricool: viveconmigoapp (sacar `blogId` y zona horaria con getBrandSettings). Comprueba SIEMPRE que
+  `networksData.instagramData` es "viveconmigoapp" (no "metodobreathforce"); si no lo es, NO programes y avisa.
 - Límite plan gratis: 20 publicaciones/mes → 10 vídeos/mes (cada vídeo = Instagram + TikTok).
   Antes de programar, contar con getScheduledPosts lo ya programado/publicado del mes; si se
   alcanzaría el límite, no programar y avisar.
@@ -109,8 +110,17 @@ imágenes antes de renderizar: que no se corte ningún texto y que nada quede fu
   para que José tenga el día para revisar el vídeo y añadirle música en TikTok si quiere).
 - `media`: URL pública jsDelivr del commit (`https://cdn.jsdelivr.net/gh/<owner>/viveconmigo-media@<sha>/videos/<archivo>.mp4`).
 - `providers`: instagram + tiktok. `instagramData.type = "REEL"`, `showReelOnFeed = true`,
-  NO enviar `audioConfiguration` (la cuenta de Instagram no está vinculada a una página de Facebook y
-  la API devuelve "Authorization Error").
+  **Música en Instagram (OBLIGATORIA)**: `instagramData.audioConfiguration = {"audioId": "<búsqueda o id>", "audioVolume": 70, "videoVolume": 100}`.
+  Desde el 05/11 Instagram está vinculado a la página de Facebook "Vive Conmigo · Pisos compartidos" y funciona.
+  Elige una canción en tendencia en España esa semana (búscalo con WebSearch: artículos tipo "audios virales
+  Reels/TikTok esta semana", playlists "TikTok Viral España") que encaje con el tono del vídeo: instrumental
+  para vídeos con mucho texto, la del trend "POV" para los POV, etc. Pasa como audioId "Título Artista";
+  si devuelve varias coincidencias, reintenta con el id numérico del candidato cuyo título sea exactamente
+  esa canción (vale `original_sound`). Si no aparece, usa la mejor alternativa de la lista de candidatos.
+  No repitas la misma canción que en los 3 vídeos anteriores (apúntala en el LOG).
+  Ya usadas: Sunshine Instrumental – Twista, Coming Up Roses – Harry Styles, Housewife (remix) – Tate McRae.
+- **Música en TikTok**: el conector no permite elegirla (TikTok solo deja la biblioteca comercial y se pone
+  a mano en Metricool). Recuérdaselo a José en el resumen.
   `tiktokData`: **`title` obligatorio** (frase corta del gancho), público, comentarios/dúo/pegar
   permitidos, `commercialContentOwnBrand` false, `autoAddMusic` false.
   `videoThumbnailUrl`: el `-cover.jpg` del mismo commit. `autoPublish: true`.
