@@ -1,0 +1,66 @@
+{
+  "cover": {
+    "kicker": "A o B",
+    "title": "La pareja de tu compi duerme en casa: *¿paga?*",
+    "theme": "rust",
+    "size": 122
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "theme": "rust",
+      "dur": 2.8,
+      "label": "A o B",
+      "lines": [
+        {
+          "t": "La pareja de tu compi",
+          "size": 112
+        },
+        {
+          "t": "duerme en casa *casi cada noche*.",
+          "size": 112,
+          "pop": true
+        }
+      ]
+    },
+    {
+      "type": "poll",
+      "theme": "cream",
+      "dur": 5.2,
+      "label": "Piso compartido",
+      "title": "¿Debería pagar *algo* de gastos?",
+      "options": [
+        "Sí, ya vive aquí: que pague su parte",
+        "No, es una visita: no paga nada"
+      ],
+      "foot": "Comenta *A* o *B* 👇"
+    },
+    {
+      "type": "text",
+      "theme": "ink",
+      "dur": 3.4,
+      "gap": 44,
+      "lines": [
+        {
+          "t": "Mejor hablarlo *antes* de entrar.",
+          "size": 100
+        },
+        {
+          "t": "En Vive Conmigo ves cómo lleva el piso las visitas y tu % de compatibilidad.",
+          "sans": true,
+          "soft": true,
+          "size": 48,
+          "wait": 0.8
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "theme": "olive",
+      "dur": 3.0,
+      "title": "Y tú, *¿A o B?*",
+      "foot": "Gratis · Link en el perfil",
+      "size": 100
+    }
+  ]
+}
