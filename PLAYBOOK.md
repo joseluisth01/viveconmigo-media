@@ -118,7 +118,7 @@ imágenes antes de renderizar: que no se corte ningún texto y que nada quede fu
   si devuelve varias coincidencias, reintenta con el id numérico del candidato cuyo título sea exactamente
   esa canción (vale `original_sound`). Si no aparece, usa la mejor alternativa de la lista de candidatos.
   No repitas la misma canción que en los 3 vídeos anteriores (apúntala en el LOG).
-  Ya usadas: Sunshine Instrumental – Twista, Coming Up Roses – Harry Styles, Housewife (remix) – Tate McRae.
+  Ya usadas: Sunshine Instrumental – Twista, Coming Up Roses – Harry Styles, Housewife (remix) – Tate McRae, H4UNT – Baldgirl. No están en el catálogo de IG: Dame Hombro (Bulin 47), Angel of My Dreams (JADE).
 - **NUNCA** uses updateScheduledPost sobre una publicación a la que José ya le haya puesto música de TikTok
   a mano (aparece `tiktokData.music` en getScheduledPosts): el conector la borra al actualizar.
 - **Música en TikTok**: el conector no permite elegirla (TikTok solo deja la biblioteca comercial y se pone
