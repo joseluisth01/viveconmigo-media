@@ -1,5 +1,7 @@
 # Registro de vídeos
 
+> Desde el 10/11/2026 la música va DENTRO del vídeo (biblioteca CC0 en assets/music). En la columna Hora/Vídeo indica también `Música: <id>`.
+
 | Publicación | Formato | Gancho | Hora | Vídeo |
 |---|---|---|---|---|
 | 2026-11-04 | Lista + barra (subido a mano) | ¿Buscas piso compartido? | 20:30 | TikTok |

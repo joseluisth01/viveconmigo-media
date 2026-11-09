@@ -87,6 +87,18 @@ En cualquier texto, `*palabra*` = cursiva en color de acento.
 - `checklist`: `{ label?, title, rows:[{t, ok?:false}] }` — 3-5 filas con ✓ o ✗.
 - `cta`: `{ title, foot? }`
 
+### Música (OBLIGATORIA, dentro del vídeo)
+José no quiere la música de Metricool. Cada vídeo lleva en el spec `"music": "<id>"` de
+`assets/music/catalog.json`: biblioteca propia de canciones **CC0 (dominio público, sin derechos ni
+atribución)** sacadas de Free Music Archive (Loyalty Freak Music, HoliznaCC0, Monplaisir). Son clips de 40 s
+ya normalizados; `render.js` los mezcla con fundido de entrada y salida.
+- Elige por `mood` según el vídeo: `alegre` (humor ligero, consejos), `disco` (listas rápidas, red flags,
+  energía), `chill` (POV, chat, vídeos con mucho texto), `tension` (debate, opinión impopular, polémica).
+- No repitas ninguna canción usada en los últimos 6 vídeos del LOG (columna Música) y rota entre todas.
+- Opcional: `"musicVolume": 0.8` si la canción tapa demasiado; `"musicStart": 5` para empezar más tarde.
+- Si José dice que una canción no le gusta, quítala de `catalog.json` (y borra el mp3).
+- Para ampliar la biblioteca: SOLO pistas con licencia CC0 verificada en la página del álbum de FMA.
+
 ### Portada (OBLIGATORIA)
 `cover: { kicker, title, theme, size? }` en la raíz del spec. Es lo que se ve en el perfil, así que
 tiene que leerse de un vistazo: kicker corto (POV, Red flags, Opinión impopular, A o B, Checklist…),
@@ -110,19 +122,10 @@ imágenes antes de renderizar: que no se corte ningún texto y que nada quede fu
   para que José tenga el día para revisar el vídeo y añadirle música en TikTok si quiere).
 - `media`: URL pública jsDelivr del commit (`https://cdn.jsdelivr.net/gh/<owner>/viveconmigo-media@<sha>/videos/<archivo>.mp4`).
 - `providers`: instagram + tiktok. `instagramData.type = "REEL"`, **`showReelOnFeed = false`** (José quiere los Reels SOLO en la pestaña de Reels, nunca en la cuadrícula del feed),
-  **Música en Instagram (OBLIGATORIA)**: `instagramData.audioConfiguration = {"audioId": "<búsqueda o id>", "audioVolume": 70, "videoVolume": 100}`.
-  Desde el 05/11 Instagram está vinculado a la página de Facebook "Vive Conmigo · Pisos compartidos" y funciona.
-  Elige una canción en tendencia en España esa semana (búscalo con WebSearch: artículos tipo "audios virales
-  Reels/TikTok esta semana", playlists "TikTok Viral España") que encaje con el tono del vídeo: instrumental
-  para vídeos con mucho texto, la del trend "POV" para los POV, etc. Pasa como audioId "Título Artista";
-  si devuelve varias coincidencias, reintenta con el id numérico del candidato cuyo título sea exactamente
-  esa canción (vale `original_sound`). Si no aparece, usa la mejor alternativa de la lista de candidatos.
-  No repitas la misma canción que en los 3 vídeos anteriores (apúntala en el LOG).
-  Ya usadas: Sunshine Instrumental – Twista, Coming Up Roses – Harry Styles, Housewife (remix) – Tate McRae, H4UNT – Baldgirl. No están en el catálogo de IG: Dame Hombro (Bulin 47), Angel of My Dreams (JADE).
+  **NO enviar `audioConfiguration`** ni poner música desde Metricool: la música va DENTRO del vídeo (ver "Música").
 - **NUNCA** uses updateScheduledPost sobre una publicación a la que José ya le haya puesto música de TikTok
   a mano (aparece `tiktokData.music` en getScheduledPosts): el conector la borra al actualizar.
-- **Música en TikTok**: el conector no permite elegirla (TikTok solo deja la biblioteca comercial y se pone
-  a mano en Metricool). Recuérdaselo a José en el resumen.
+- **Música en TikTok**: también va dentro del vídeo; no hay que añadir nada en Metricool.
   `tiktokData`: **`title` obligatorio** (frase corta del gancho), público, comentarios/dúo/pegar
   permitidos, `commercialContentOwnBrand` false, `autoAddMusic` false.
   `videoThumbnailUrl`: el `-cover.jpg` del mismo commit. `autoPublish: true`.
