@@ -114,9 +114,9 @@ imágenes antes de renderizar: que no se corte ningún texto y que nada quede fu
 ## Publicación (Metricool)
 - Marca Metricool: viveconmigoapp (sacar `blogId` y zona horaria con getBrandSettings). Comprueba SIEMPRE que
   `networksData.instagramData` es "viveconmigoapp" (no "metodobreathforce"); si no lo es, NO programes y avisa.
-- Límite plan gratis: 20 publicaciones/mes → 10 vídeos/mes (cada vídeo = Instagram + TikTok).
-  Antes de programar, contar con getScheduledPosts lo ya programado/publicado del mes; si se
-  alcanzaría el límite, no programar y avisar.
+- Frecuencia: la tarea se ejecuta TODOS los días a las 4:35 y programa 1 vídeo diario (Instagram + TikTok).
+  Plan gratis de Metricool: 20 publicaciones PUBLICADAS al mes (se reinicia el día 1). Si Metricool rechaza
+  por el límite, no insistir: dejar el vídeo en el repo y avisar.
 - Programar para **el día siguiente** a la mejor hora (getBestTimeToPostByNetwork para tiktok e
   instagram; normalizar cada red por su máximo, sumar y elegir la mejor hora **entre 17:00 y 21:00**,
   para que José tenga el día para revisar el vídeo y añadirle música en TikTok si quiere).
