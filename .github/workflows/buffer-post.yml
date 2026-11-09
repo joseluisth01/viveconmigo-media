@@ -1,0 +1,38 @@
+name: buffer-post
+# Lanzada por la tarea programada de Claude (gh workflow run) para programar el Reel en Buffer.
+# La clave vive solo en el secreto BUFFER_API_KEY del repo.
+on:
+  workflow_dispatch:
+    inputs:
+      cmd:      { description: "channels | post | delete", required: true, default: "channels" }
+      service:  { description: "instagram | tiktok", required: false, default: "instagram" }
+      text:     { description: "Texto del post", required: false, default: "" }
+      due:      { description: "Fecha UTC ISO con Z", required: false, default: "" }
+      video:    { description: "URL pública del mp4", required: false, default: "" }
+      thumb_ms: { description: "Offset portada (ms)", required: false, default: "" }
+      post_id:  { description: "Id del post (delete)", required: false, default: "" }
+permissions:
+  contents: read
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Buffer
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          CMD: ${{ inputs.cmd }}
+          SERVICE: ${{ inputs.service }}
+          TEXT: ${{ inputs.text }}
+          DUE: ${{ inputs.due }}
+          VIDEO: ${{ inputs.video }}
+          THUMB: ${{ inputs.thumb_ms }}
+          PID: ${{ inputs.post_id }}
+        run: |
+          set -e
+          args=("$CMD")
+          [ "$CMD" = "post" ] && args+=(--service "$SERVICE" --text "$TEXT" --due "$DUE" --video "$VIDEO")
+          [ "$CMD" = "post" ] && [ -n "$THUMB" ] && args+=(--thumb-ms "$THUMB")
+          [ "$CMD" = "delete" ] && args+=(--id "$PID")
+          python3 tools/buffer.py "${args[@]}"

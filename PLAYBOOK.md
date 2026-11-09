@@ -111,28 +111,44 @@ Render: `node render.js specs/AAAA-MM-DD-slug.json videos/AAAA-MM-DD-slug.mp4`
 (genera también `-cover.jpg`). Comprobar SIEMPRE con `--probe` (3–4 instantes) y mirar las
 imágenes antes de renderizar: que no se corte ningún texto y que nada quede fuera de la zona segura.
 
-## Publicación (Metricool)
-- Marca Metricool: viveconmigoapp (sacar `blogId` y zona horaria con getBrandSettings). Comprueba SIEMPRE que
-  `networksData.instagramData` es "viveconmigoapp" (no "metodobreathforce"); si no lo es, NO programes y avisa.
-- Frecuencia: la tarea se ejecuta TODOS los días a las 4:35 y programa 1 vídeo diario (Instagram + TikTok).
-  Plan gratis de Metricool: 20 publicaciones PUBLICADAS al mes (se reinicia el día 1). Si Metricool rechaza
-  por el límite, no insistir: dejar el vídeo en el repo y avisar.
-- Programar para **el día siguiente** a la mejor hora (getBestTimeToPostByNetwork para tiktok e
-  instagram; normalizar cada red por su máximo, sumar y elegir la mejor hora **entre 17:00 y 21:00**,
-  para que José tenga el día para revisar el vídeo y añadirle música en TikTok si quiere).
-- `media`: URL pública jsDelivr del commit (`https://cdn.jsdelivr.net/gh/<owner>/viveconmigo-media@<sha>/videos/<archivo>.mp4`).
-- `providers`: instagram + tiktok. `instagramData.type = "REEL"`, **`showReelOnFeed = false`** (José quiere los Reels SOLO en la pestaña de Reels, nunca en la cuadrícula del feed),
-  **NO enviar `audioConfiguration`** ni poner música desde Metricool: la música va DENTRO del vídeo (ver "Música").
-- **NUNCA** uses updateScheduledPost sobre una publicación a la que José ya le haya puesto música de TikTok
-  a mano (aparece `tiktokData.music` en getScheduledPosts): el conector la borra al actualizar.
-- **Música en TikTok**: también va dentro del vídeo; no hay que añadir nada en Metricool.
-  `tiktokData`: **`title` obligatorio** (frase corta del gancho), público, comentarios/dúo/pegar
-  permitidos, `commercialContentOwnBrand` false, `autoAddMusic` false.
-  `videoThumbnailUrl`: el `-cover.jpg` del mismo commit. `autoPublish: true`.
-- Metricool vuelve a alojar el vídeo (static.metricool.com), así que el enlace de jsDelivr solo tiene
-  que funcionar en el momento de programar. Comprobar con curl que devuelve 200 y video/mp4 antes.
-- Texto: 1–2 frases con pregunta para comentarios + "Link en el perfil." + 4–6 hashtags
-  (#pisocompartido #compañerosdepiso #buscopiso #estudiantes #universidad + uno del tema).
+## Publicación (desde el 11/11/2026)
+Instagram va por **Buffer** (diario, sin límite mensual) y TikTok por **Metricool** (plan gratis: máx. 20
+publicaciones publicadas al mes; se aprovechan TODAS). Hora: el día siguiente a la mejor hora entre 17:00 y 21:00.
+
+### Hora
+- getBestTimeToPostByNetwork (Metricool, brandId 7884043, tz Europe/Madrid) para tiktok e instagram del día
+  siguiente; normaliza cada red por su máximo, suma y elige la mejor hora entre 17:00 y 21:00 (hora de Madrid).
+- **Buffer usa UTC**: convierte la hora de Madrid a UTC con zoneinfo (invierno UTC+1, verano UTC+2), p. ej.
+  `python3 -c "from datetime import datetime;from zoneinfo import ZoneInfo as Z;print(datetime(2026,11,12,18,0,tzinfo=Z('Europe/Madrid')).astimezone(Z('UTC')).strftime('%Y-%m-%dT%H:%M:%S.000Z'))"`.
+
+### Instagram → Buffer (acción de GitHub `buffer-post`)
+La clave de Buffer solo está en el secreto `BUFFER_API_KEY` del repo; nunca la pidas ni la escribas.
+```
+gh workflow run buffer-post.yml -R joseluisth01/viveconmigo-media -f cmd=post -f service=instagram \
+  -f text="<texto>" -f due="<UTC ...Z>" -f video="<URL jsDelivr del mp4>" -f thumb_ms=<coverOffsetMs>
+```
+`coverOffsetMs` está en `videos/<archivo>.json` (la portada diseñada va en los últimos 0,3 s del vídeo).
+Espera a que termine (`gh run list -R ... -w buffer-post -L 1`, `gh run watch <id> --exit-status`) y lee el
+resultado con `gh run view <id> --log | grep RESULT_JSON`. Debe ser `PostActionSuccess` con el id del post.
+El script solo publica en canales cuyo nombre contenga "viveconmigo" (nunca en los de BreathForce).
+Para borrar un post: `-f cmd=delete -f post_id=<id>`. Para cambiar la hora: borrar y crear de nuevo.
+Si la acción falla, NO reintentes más de una vez; avisa a José con el error.
+
+### TikTok → Metricool (mientras quede cupo)
+- Lee `metricool_usage.json`. Si el mes de publicación ya tiene 20, NO programes TikTok y dilo en el resumen.
+- Comprueba con getBrandSettings que tiktokData = "viveconmigoapp".
+- createScheduledPost SOLO con provider tiktok, autoPublish true, media = URL jsDelivr del mp4,
+  videoThumbnailUrl = URL jsDelivr del -cover.jpg, tiktokData {title (frase corta del gancho, obligatorio),
+  privacyOption PUBLIC_TO_EVERYONE, comentarios/dúo/pegar permitidos, commercialContentOwnBrand false,
+  autoAddMusic false}. Sin música desde Metricool (ya va en el vídeo).
+- Si se programa bien, suma 1 en `metricool_usage.json` para ese mes. Si Metricool rechaza por el límite, pon
+  el contador a 20 y no insistas.
+- **NUNCA** uses updateScheduledPost sobre una publicación a la que José le haya puesto música a mano.
+
+### Texto del post (igual en las dos redes)
+1-2 frases con pregunta o reto para comentarios + "Link en el perfil." + 4-6 hashtags
+(#pisocompartido #compañerosdepiso #buscopiso #estudiantes #universidad + uno del tema).
+Comprueba antes con curl que el mp4 y el -cover.jpg de jsDelivr (con el SHA del commit) devuelven 200.
 
 ## Registro
 Añadir una línea a `LOG.md` por vídeo: fecha de publicación · formato · gancho · hora · URL.

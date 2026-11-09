@@ -39,13 +39,15 @@ const fps = 30;
   }
 
   const total = Math.round(dur * fps);
+  const coverFrames = spec.cover ? 9 : 0;           // 0.3 s
+  const outDur = (total + coverFrames) / fps;
   // Música: spec.music = id de assets/music/catalog.json (CC0). Se mezcla dentro del vídeo con fundidos.
   let audioIn = ['-f', 'lavfi', '-i', 'anullsrc=channel_layout=stereo:sample_rate=44100'];
   let audioFilter = [];
   if (spec.music) {
     const file = path.resolve(__dirname, 'assets/music', spec.music + '.mp3');
     if (!fs.existsSync(file)) throw new Error('No existe la música ' + spec.music + ' (mira assets/music/catalog.json)');
-    const vol = spec.musicVolume || 1.0, fo = Math.max(0, dur - 1.8);
+    const vol = spec.musicVolume || 1.0, fo = Math.max(0, outDur - 1.8);
     audioIn = ['-ss', String(spec.musicStart || 0), '-i', file];
     audioFilter = ['-af', `volume=${vol},afade=t=in:d=0.3,afade=t=out:st=${fo.toFixed(2)}:d=1.8`];
   }
@@ -56,16 +58,27 @@ const fps = 30;
     '-map', '0:v', '-map', '1:a',
     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p',
     ...audioFilter,
-    '-c:a', 'aac', '-b:a', '160k', '-t', dur.toFixed(2), '-movflags', '+faststart', out,
+    '-c:a', 'aac', '-b:a', '160k', '-t', outDur.toFixed(2), '-movflags', '+faststart', out,
   ], { stdio: ['pipe', 'inherit', 'inherit'] });
   for (let i = 0; i < total; i++) {
     await page.evaluate((x) => window.render(x), i / fps);
     const buf = await page.screenshot({ type: 'jpeg', quality: 92 });
     if (!ff.stdin.write(buf)) await new Promise((r) => ff.stdin.once('drain', r));
   }
+  // Portada diseñada en los últimos 0.3 s del vídeo: así Buffer/Instagram pueden usarla como
+  // portada con thumbnailOffset (ms) = coverOffsetMs (se guarda en <salida>.json).
+  if (spec.cover) {
+    await page.evaluate((x) => window.render(x), dur - 0.01);
+    const hasCover = await page.evaluate(() => window.renderCover());
+    if (hasCover) {
+      const cbuf = await page.screenshot({ type: 'jpeg', quality: 92 });
+      for (let k = 0; k < coverFrames; k++) if (!ff.stdin.write(cbuf)) await new Promise((r) => ff.stdin.once('drain', r));
+    }
+  }
   ff.stdin.end();
   await new Promise((r) => ff.on('close', r));
-  await renderCover(page, out.replace(/\.mp4$/, '-cover.jpg'));
+  await page.screenshot({ path: out.replace(/\.mp4$/, '-cover.jpg'), type: 'jpeg', quality: 90 });
+  fs.writeFileSync(out.replace(/\.mp4$/, '.json'), JSON.stringify({ duration: +outDur.toFixed(2), coverOffsetMs: Math.round((total + coverFrames / 2) / fps * 1000), music: spec.music || null }, null, 1));
   console.log('ok', out, dur.toFixed(1) + 's');
   await browser.close();
 })();
