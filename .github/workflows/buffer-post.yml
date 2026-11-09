@@ -2,6 +2,9 @@ name: buffer-post
 # Lanzada por la tarea programada de Claude (gh workflow run) para programar el Reel en Buffer.
 # La clave vive solo en el secreto BUFFER_API_KEY del repo.
 on:
+  push:
+    branches: [main]
+    paths: ['queue/*.json']
   workflow_dispatch:
     inputs:
       cmd:      { description: "channels | post | delete", required: true, default: "channels" }
@@ -19,7 +22,26 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - name: Buffer
+        with:
+          fetch-depth: 2
+      - name: Cola (push a queue/*.json)
+        if: github.event_name == 'push'
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          set -e
+          for f in $(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'queue/*.json'); do
+            echo "== $f"
+            python3 - "$f" <<'PY'
+          import json,subprocess,sys
+          d=json.load(open(sys.argv[1]))
+          a=['python3','tools/buffer.py','post','--service',d.get('service','instagram'),'--text',d['text'],'--due',d['due'],'--video',d['video']]
+          if d.get('thumb_ms'): a+=['--thumb-ms',str(d['thumb_ms'])]
+          subprocess.run(a,check=True)
+          PY
+          done
+      - name: Buffer (manual)
+        if: github.event_name == 'workflow_dispatch'
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           CMD: ${{ inputs.cmd }}

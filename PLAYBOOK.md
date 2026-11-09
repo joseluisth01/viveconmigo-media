@@ -153,3 +153,10 @@ Comprueba antes con curl que el mp4 y el -cover.jpg de jsDelivr (con el SHA del 
 ## Registro
 Añadir una línea a `LOG.md` por vídeo: fecha de publicación · formato · gancho · hora · URL.
 Leer `LOG.md` antes de empezar para no repetir formato ni tema de los últimos 6 vídeos.
+
+
+### IMPORTANTE: cómo lanzar Instagram/Buffer desde la nube
+`gh workflow run` da 403 en sesiones de la nube. Usa la cola: crea `queue/AAAA-MM-DD-slug.json` con
+`{"service":"instagram","text":"...","due":"<UTC con Z>","video":"<url jsDelivr>","thumb_ms":<coverOffsetMs>}`,
+haz commit + push a main (el vídeo ya debe estar subido y servido por jsDelivr). Eso lanza `buffer-post`; el resultado (RESULT_JSON)
+se lee con `gh api repos/joseluisth01/viveconmigo-media/actions/runs/<id>/logs`.
