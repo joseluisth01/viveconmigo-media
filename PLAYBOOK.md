@@ -23,15 +23,41 @@ y lo programa en Metricool (Instagram Reel + TikTok) para el día siguiente.
 
 ## Objetivo: VISUALIZACIONES y REACCIÓN
 Cada vídeo tiene que provocar algo: risa, "esto me pasó", ganas de etiquetar a un amigo o ganas de
-opinar en comentarios. Mezcla de contenidos (en cada bloque de ~6 vídeos):
-- ~3 de **humor / identificación** (situaciones de piso que todo el mundo ha vivido).
-- ~2 de **debate / tema sensible** que divide opiniones y genera comentarios (ver lista abajo).
-  Se plantea como pregunta, sin insultar ni ridiculizar a nadie, sin estereotipos de género, origen,
-  religión ni orientación. Polémica de convivencia, no de grupos de personas.
-- ~1 **útil / producto** (consejos, cómo funciona la compatibilidad, inquilino que busca compi).
-El CTA de los de debate pide opinar ("Comenta A o B", "¿Estás de acuerdo?", "Etiqueta a tu compi").
+opinar en comentarios.
 
-### Banco de temas de debate (rotar, no repetir)
+### REGLA DE ORO (desde 10/11/2026): temas de CONVIVENCIA que enfrentan a la gente
+José quiere vídeos de **rivalidad**: temas que dividen de verdad a quien comparte piso y que son
+justo lo que Vive Conmigo hace visible *antes* de mudarte (hábitos del piso + % de compatibilidad).
+Prioriza SIEMPRE los temas que **deciden si dos personas pueden convivir**, no las manías menores.
+- **Temas de peso (usar casi siempre):** tabaco (fumar dentro, en el balcón, que huela la casa), mascotas
+  (perros, gatos, alergias, pelos, ruido), **limpieza** (qué es "limpio", cada cuánto se limpia el baño,
+  platos, turnos, quién limpia lo común), horarios y sueño (madrugadores vs noctámbulos, turnos),
+  ruido y fiestas, visitas y parejas que se quedan, alcohol/fiesta, teletrabajo y silencio, edad
+  (estudiantes con trabajadores o mayores), chicos/chicas/mixto, dinero y reparto de gastos, orden y zonas comunes,
+  respeto a la intimidad, cocinar/olores, temperatura (calefacción/aire).
+- **Temas menores (EVITAR como tema central):** quién tiene balda en la nevera, etiquetar la comida,
+  el orden de las toallas, el color de las cortinas… Solo pueden salir como gag secundario dentro de un
+  vídeo de otro tema, nunca como idea principal.
+- **Estructura de rivalidad:** pon a dos bandos frente a frente ("fumador vs no fumador", "dueño de perro vs
+  alérgico", "limpio vs 'yo no veo suciedad'", "madrugador vs noctámbulo") con A o B / ¿quién tiene razón? /
+  "Comenta A o B". Siempre respetuoso: se discute el hábito, nunca se ridiculiza a una persona o grupo.
+- **Enlace con la web SIEMPRE:** el cierre conecta con el producto: en Vive Conmigo ves si los del piso fuman,
+  tienen mascotas, cuánto limpian, sus horarios… y tu % de compatibilidad antes de escribir. El CTA lo dice
+  claro ("Que no te lo cuenten al llegar: míralo antes en vive-conmigo.es") y pide comentar el bando.
+- Mezcla en cada bloque de ~6 vídeos: **~4 de rivalidad/convivencia (los temas de peso)**, ~1 de
+  humor/identificación y ~1 útil/producto. Tema de peso distinto en cada vídeo (no repetir tema en los últimos 6).
+
+### Banco de temas de debate (rotar, no repetir; los de peso primero)
+- Fumador vs no fumador: ¿fumar en el balcón cuenta como fumar en casa? ¿es de mala persona no querer vivir con fumadores?
+- Mascotas: ¿perro o gato en el piso? ¿y si uno es alérgico? ¿quién lo cuida y quién limpia los pelos?
+- Limpieza: ¿cada cuánto se limpia el baño? ¿qué es "limpio" para ti? ¿turnos o "el que lo ve, lo limpia"?
+- Platos sucios: ¿cuántas horas son aceptables? ¿Quién limpia las zonas comunes si uno es más maniático?
+- Madrugador vs noctámbulo: ruido por la mañana y por la noche, aspiradora, música, llegar a las 4.
+- Fiesta: ¿cuántas veces al mes se puede invitar gente? ¿y si el otro tiene examen o trabaja temprano?
+- Alcohol y fiesta en casa vs piso tranquilo.
+- Teletrabajo: silencio en horario laboral y reparto de la factura de luz/calefacción.
+- Calefacción y aire: ¿a cuántos grados? ¿quién decide?
+- Cocinar: olores, ajos, pescado, fritos; ¿se comparte comida o cada uno la suya?
 - La pareja que se queda a dormir casi todos los días: ¿debe pagar?
 - La habitación grande: ¿paga lo mismo o más?
 - ¿Dividir la luz a partes iguales si uno trabaja desde casa todo el día?
