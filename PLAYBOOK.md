@@ -47,6 +47,28 @@ Prioriza SIEMPRE los temas que **deciden si dos personas pueden convivir**, no l
 - Mezcla en cada bloque de ~6 vídeos: **~4 de rivalidad/convivencia (los temas de peso)**, ~1 de
   humor/identificación y ~1 útil/producto. Tema de peso distinto en cada vídeo (no repetir tema en los últimos 6).
 
+### VIRALIDAD (obligatorio en cada vídeo; objetivo: llegar al máximo de gente)
+Instagram y TikTok reparten un vídeo a más gente cuando la gente **lo ve entero, lo repite, lo comparte, lo guarda y comenta**.
+Diseña cada vídeo para eso:
+1. **Gancho en el primer segundo**: la pantalla 0-1 s ya muestra el conflicto o la pregunta polémica en texto grande
+   (sin intro, sin logo al principio). Debe entenderse sin sonido.
+2. **Corto y denso**: 12-22 s como norma; cada escena 1.5-3 s; cero tiempos muertos. Menos escenas pero con una sola idea.
+3. **Bucle / rewatch**: el final enlaza con el principio (la última frase vuelve a abrir la pregunta del gancho) o deja un
+   dato/giro que invita a verlo otra vez. Evita cerrar con un CTA largo: el CTA a la web va en los últimos ~2.5 s.
+4. **Provoca bando**: pregunta cerrada y fácil de contestar en comentarios ("A o B", "¿tú de cuál eres?", "Escribe 1 o 2").
+   Cuanto más fácil responder, más comentarios. Toma un bando claro en el texto del vídeo (opinión con la que muchos
+   discreparán), siempre sobre hábitos y con respeto.
+5. **Compartible**: incluye una frase tipo "Mándaselo a tu compi", "Etiqueta a quien hace esto" o "Guárdalo para cuando busques piso".
+6. **Texto del post**: primera línea = el gancho con palabras que la gente busca (compartir piso, compañero de piso, buscar habitación,
+   fumar, mascotas, limpieza…); 1 pregunta; "Link en el perfil."; 4-6 hashtags mezclando grandes (#pisocompartido #compartirpiso)
+   y de nicho del tema (#mascotas #fumadores #limpieza…).
+7. **Portada** legible y con la pregunta polémica en 3-6 palabras (la gente decide por la portada del perfil).
+8. **Consistencia reconocible**: mantén el mismo tipo de vídeo "A o B de convivencia" como serie recurrente
+   ("Convivencia A o B nº X") alternando con otros formatos, para que el algoritmo y la gente asocien la cuenta con ese contenido.
+9. **Qué ha funcionado**: antes de decidir tema/formato consulta getAnalyticsDataByMetrics y repite lo que más vistas, comentarios,
+   compartidos y guardados haya dado (más peso, sin copiar el mismo vídeo).
+10. Nada de promesas ni cifras inventadas, ni atacar a grupos: la polémica sana de hábitos viral y no pone en riesgo la cuenta.
+
 ### Banco de temas de debate (rotar, no repetir; los de peso primero)
 - Fumador vs no fumador: ¿fumar en el balcón cuenta como fumar en casa? ¿es de mala persona no querer vivir con fumadores?
 - Mascotas: ¿perro o gato en el piso? ¿y si uno es alérgico? ¿quién lo cuida y quién limpia los pelos?
