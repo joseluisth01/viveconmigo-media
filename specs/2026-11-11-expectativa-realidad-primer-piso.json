@@ -1,0 +1,62 @@
+{
+  "cover": {
+    "kicker": "Expectativa vs realidad",
+    "title": "Tu primer mes en un *piso compartido*",
+    "theme": "ink",
+    "size": 118
+  },
+  "music": "loyalty-frea-love-train",
+  "scenes": [
+    {
+      "type": "hook",
+      "theme": "ink",
+      "dur": 2.6,
+      "label": "Expectativa vs realidad",
+      "lines": [
+        { "t": "Nadie te cuenta *esto*", "size": 116 },
+        { "t": "de tu primer piso compartido.", "size": 96, "pop": true }
+      ]
+    },
+    {
+      "type": "versus",
+      "theme": "cream",
+      "dur": 4,
+      "title": "La *nevera*",
+      "left": { "label": "Expectativa", "items": ["Una balda para cada uno", "Compra a medias"] },
+      "right": { "label": "Realidad", "items": ["Tu yogur desaparece", "Un limón de hace meses"] }
+    },
+    {
+      "type": "versus",
+      "theme": "sand",
+      "dur": 4,
+      "title": "Los *platos*",
+      "left": { "label": "Expectativa", "items": ["Cada uno friega lo suyo", "Cocina siempre limpia"] },
+      "right": { "label": "Realidad", "items": ["Torre de platos", "«Están en remojo»"] }
+    },
+    {
+      "type": "versus",
+      "theme": "terra",
+      "dur": 4,
+      "title": "El *baño*",
+      "left": { "label": "Expectativa", "items": ["Turnos pactados", "Papel siempre"] },
+      "right": { "label": "Realidad", "items": ["Cola a primera hora", "El último rollo, vacío"] }
+    },
+    {
+      "type": "text",
+      "theme": "ink",
+      "dur": 3.6,
+      "gap": 44,
+      "lines": [
+        { "t": "La diferencia es *con quién* vives.", "size": 100 },
+        { "t": "En Vive Conmigo ves los hábitos del piso y tu % de compatibilidad antes de escribir.", "sans": true, "soft": true, "size": 48, "wait": 0.8 }
+      ]
+    },
+    {
+      "type": "cta",
+      "theme": "olive",
+      "dur": 3.4,
+      "title": "¿Cuál te ha pasado *a ti*?",
+      "foot": "Etiqueta a tu compi 👇"
+    }
+  ]
+}
