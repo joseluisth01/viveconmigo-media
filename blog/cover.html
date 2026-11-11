@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<style>
+/* Zona segura: el blog recorta con object-cover (cabecera 2.4:1, móvil 1.35:1). Todo lo importante dentro de x 200-1400, y 125-775. */
+@font-face{font-family:Fraunces;src:url(../assets/fraunces-latin-wght-normal.woff2) format('woff2');font-weight:100 900}
+@font-face{font-family:Fraunces;src:url(../assets/fraunces-latin-wght-italic.woff2) format('woff2');font-weight:100 900;font-style:italic}
+@font-face{font-family:Inter;src:url(../assets/inter-latin-500-normal.woff2) format('woff2');font-weight:500}
+@font-face{font-family:Inter;src:url(../assets/inter-latin-600-normal.woff2) format('woff2');font-weight:600}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1600px;height:900px;overflow:hidden}
+body{background:var(--bg);color:var(--fg);font-family:Inter,sans-serif;position:relative}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.55}
+.wrap{position:absolute;inset:0;display:grid;grid-template-columns:1fr 500px;align-items:center;padding:150px 200px 170px 210px;gap:30px}
+.kicker{display:inline-block;font:600 22px/1 Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:26px}
+h1{font:500 74px/1.04 Fraunces,serif;letter-spacing:-.02em;max-width:700px}
+h1 em{font-style:italic;color:var(--accent)}
+.sub{margin-top:24px;font:500 25px/1.35 Inter;color:var(--soft);max-width:640px}
+.brand{position:absolute;left:210px;bottom:140px;display:flex;align-items:center;gap:14px;font:500 30px/1 Fraunces;color:var(--fg)}
+.brand img{width:44px;height:44px}
+.brand i{font-style:italic;color:var(--accent)}
+.art{position:relative;width:500px;height:500px}
+.art svg{width:100%;height:100%}
+.card{position:absolute;background:var(--card);border-radius:28px;box-shadow:0 30px 60px -20px rgba(31,27,22,.35);padding:20px 24px;font:600 20px/1.25 Inter;color:#1F1B16}
+.card small{display:block;font:500 16px/1.3 Inter;color:#5E564C;margin-top:6px}
+.pill{display:inline-block;margin-top:12px;padding:6px 14px;border-radius:999px;background:#6B7A4F;color:#FAF7F2;font:600 15px/1 Inter}
+</style></head>
+<body>
+<div class="blob" style="width:760px;height:760px;right:-160px;top:-220px;background:var(--glow)"></div>
+<div class="blob" style="width:420px;height:420px;left:-140px;bottom:-200px;background:var(--glow)"></div>
+<div class="wrap">
+  <div><span class="kicker" id="k"></span><h1 id="t"></h1><p class="sub" id="s"></p></div>
+  <div class="art" id="art"></div>
+</div>
+<div class="brand"><img src="../assets/logo.png" alt=""><span>Vive<i>conmigo</i></span></div>
+<script>
+const C={cream:'#FAF7F2',ink:'#1F1B16',terra:'#C75B3C',olive:'#6B7A4F',sand:'#F1E6D6',rust:'#A6462A',peach:'#E58A6D',butter:'#F3E3BF',blush:'#FBE7DF',stone:'#CFC6B8',grey:'#5E564C'};
+const TH={
+ cream:{bg:C.cream,fg:C.ink,accent:C.terra,soft:C.grey,glow:C.blush,card:'#fff',line:C.ink,fill:C.butter,fill2:C.peach},
+ sand:{bg:C.sand,fg:C.ink,accent:C.terra,soft:C.grey,glow:C.butter,card:'#fff',line:C.ink,fill:C.cream,fill2:C.peach},
+ ink:{bg:C.ink,fg:C.cream,accent:C.peach,soft:C.stone,glow:'#3a2f27',card:C.cream,line:C.cream,fill:'#3a332c',fill2:C.terra},
+ terra:{bg:C.terra,fg:C.cream,accent:C.butter,soft:C.blush,glow:C.peach,card:C.cream,line:C.cream,fill:C.rust,fill2:C.butter},
+ olive:{bg:C.olive,fg:C.cream,accent:C.butter,soft:C.butter,glow:'#7f8e61',card:C.cream,line:C.cream,fill:'#5b6843',fill2:C.butter},
+};
+// Motivos: ilustraciones de línea simples. La tarea puede pasar "svg" propio (viewBox 0 0 640 640).
+const M={
+ residencia:(t)=>`<rect x="70" y="150" width="230" height="400" rx="14" fill="${t.fill}" stroke="${t.line}" stroke-width="5"/>
+   ${[0,1,2,3,4].map(r=>[0,1].map(c=>`<rect x="${105+c*95}" y="${185+r*70}" width="60" height="42" rx="6" fill="none" stroke="${t.line}" stroke-width="4"/>`).join('')).join('')}
+   <path d="M340 330 L470 230 L600 330" fill="none" stroke="${t.line}" stroke-width="5" stroke-linejoin="round"/>
+   <rect x="365" y="325" width="210" height="225" rx="12" fill="${t.fill2}" stroke="${t.line}" stroke-width="5"/>
+   <rect x="440" y="440" width="60" height="110" rx="6" fill="none" stroke="${t.line}" stroke-width="5"/>
+   <circle cx="470" cy="385" r="22" fill="none" stroke="${t.line}" stroke-width="4"/>
+   <text x="320" y="605" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="64" fill="${t.line}">vs</text>`,
+ limpieza:(t)=>`<rect x="150" y="380" width="340" height="170" rx="20" fill="${t.fill}" stroke="${t.line}" stroke-width="5"/>
+   <path d="M210 380 L250 170 L300 170 L330 380" fill="${t.fill2}" stroke="${t.line}" stroke-width="5" stroke-linejoin="round"/>
+   <circle cx="420" cy="230" r="34" fill="none" stroke="${t.line}" stroke-width="4"/><circle cx="480" cy="160" r="20" fill="none" stroke="${t.line}" stroke-width="4"/><circle cx="380" cy="140" r="14" fill="none" stroke="${t.line}" stroke-width="4"/>`,
+ llaves:(t)=>`<circle cx="240" cy="250" r="110" fill="${t.fill2}" stroke="${t.line}" stroke-width="6"/><circle cx="240" cy="250" r="40" fill="${t.bg}" stroke="${t.line}" stroke-width="6"/>
+   <path d="M320 330 L520 530 M450 460 L500 410 M490 500 L530 460" stroke="${t.line}" stroke-width="10" stroke-linecap="round"/>`,
+ maleta:(t)=>`<rect x="140" y="230" width="360" height="300" rx="30" fill="${t.fill2}" stroke="${t.line}" stroke-width="6"/>
+   <path d="M250 230 V180 a20 20 0 0 1 20 -20 h100 a20 20 0 0 1 20 20 V230" fill="none" stroke="${t.line}" stroke-width="6"/>
+   <path d="M230 230 V530 M410 230 V530" stroke="${t.line}" stroke-width="6"/><circle cx="190" cy="560" r="18" fill="${t.line}"/><circle cx="450" cy="560" r="18" fill="${t.line}"/>`,
+ birrete:(t)=>`<path d="M320 170 L590 280 L320 390 L50 280 Z" fill="${t.fill2}" stroke="${t.line}" stroke-width="6" stroke-linejoin="round"/>
+   <path d="M170 330 V450 Q320 530 470 450 V330" fill="${t.fill}" stroke="${t.line}" stroke-width="6"/>
+   <path d="M560 290 V430" stroke="${t.line}" stroke-width="6"/><circle cx="560" cy="445" r="16" fill="${t.line}"/>`,
+};
+function md(s){return (s||'').replace(/\*(.+?)\*/g,'<em>$1</em>')}
+window.paint=(spec)=>{
+ const t=TH[spec.theme||'cream'];
+ for(const k of ['bg','fg','accent','soft','glow','card']) document.body.style.setProperty('--'+k,t[k]);
+ document.getElementById('k').textContent=spec.kicker||'';
+ document.getElementById('t').innerHTML=md(spec.title);
+ document.getElementById('s').textContent=spec.sub||'';
+ if(spec.titleSize) document.getElementById('t').style.fontSize=spec.titleSize+'px';
+ let art=spec.svg || (M[spec.motif]||M.llaves)(t);
+ let html=`<svg viewBox="0 0 640 640">${art}</svg>`;
+ for(const c of (spec.cards||[])) html+=`<div class="card" style="left:${c.x}px;top:${c.y}px">${c.t}${c.small?`<small>${c.small}</small>`:''}${c.pill?`<span class="pill">${c.pill}</span>`:''}</div>`;
+ document.getElementById('art').innerHTML=html;
+};
+</script></body></html>
