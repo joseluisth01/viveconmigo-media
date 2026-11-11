@@ -1,0 +1,60 @@
+{
+  "cover": {
+    "kicker": "Opinión impopular",
+    "title": "El baño se limpia *cada semana*. Punto.",
+    "theme": "terra",
+    "size": 118
+  },
+  "music": "holiznacc0-pantheon",
+  "scenes": [
+    {
+      "type": "hook",
+      "theme": "sand",
+      "dur": 2.5,
+      "label": "Limpieza en el piso",
+      "lines": [
+        { "t": "Limpio *vs*", "size": 124 },
+        { "t": "«yo no veo suciedad».", "size": 108, "pop": true },
+        { "t": "¿Quién tiene razón?", "sans": true, "size": 56, "wait": 0.5 }
+      ]
+    },
+    {
+      "type": "quote",
+      "theme": "terra",
+      "dur": 3.2,
+      "title": "El baño se limpia *cada semana*. No cuando «se vea sucio».",
+      "size": 98,
+      "sub": "Y los platos, el *mismo día*."
+    },
+    {
+      "type": "poll",
+      "theme": "cream",
+      "dur": 4.4,
+      "label": "Tú decides",
+      "title": "¿Cada cuánto se limpia el *baño*?",
+      "options": [
+        "Cada semana, con turnos fijos",
+        "Cuando se vea sucio, sin dramas"
+      ],
+      "foot": "Comenta *A* o *B* 👇"
+    },
+    {
+      "type": "text",
+      "theme": "ink",
+      "dur": 3.2,
+      "gap": 44,
+      "lines": [
+        { "t": "Esto se habla *antes* de mudarte.", "size": 100 },
+        { "t": "En Vive Conmigo ves cómo limpia la gente del piso y tu % de compatibilidad.", "sans": true, "soft": true, "size": 48, "wait": 0.7 }
+      ]
+    },
+    {
+      "type": "cta",
+      "theme": "rust",
+      "dur": 2.6,
+      "title": "¿Limpio o *«no lo veo»*?",
+      "foot": "Mándaselo a tu compi 👇",
+      "size": 100
+    }
+  ]
+}
