@@ -35,6 +35,8 @@ jobs:
             python3 - "$f" <<'PY'
           import json,subprocess,sys
           d=json.load(open(sys.argv[1]))
+          if d.get('cmd')=='delete':
+              subprocess.run(['python3','tools/buffer.py','delete','--id',d['post_id']],check=True); sys.exit(0)
           a=['python3','tools/buffer.py','post','--service',d.get('service','instagram'),'--text',d['text'],'--due',d['due'],'--video',d['video']]
           if d.get('thumb_ms'): a+=['--thumb-ms',str(d['thumb_ms'])]
           subprocess.run(a,check=True)
