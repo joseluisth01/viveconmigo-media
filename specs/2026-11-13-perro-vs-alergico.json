@@ -1,0 +1,60 @@
+{
+  "cover": {
+    "kicker": "Convivencia A o B",
+    "title": "Perro en el piso compartido: ¿*sí* o *no*?",
+    "theme": "olive",
+    "size": 112
+  },
+  "music": "loyalty-frea-friend-to-friend",
+  "scenes": [
+    {
+      "type": "hook",
+      "theme": "ink",
+      "dur": 2.6,
+      "label": "Mascotas en el piso",
+      "lines": [
+        { "t": "Tu compi trae un *perro*.", "size": 112 },
+        { "t": "Tú eres *alérgico*.", "size": 112, "pop": true },
+        { "t": "¿Quién cede?", "sans": true, "size": 60, "wait": 0.5 }
+      ]
+    },
+    {
+      "type": "chat",
+      "theme": "sand",
+      "dur": 5.4,
+      "label": "Grupo del piso 🏠",
+      "msgs": [
+        { "from": "them", "t": "Este finde viene Toby 🐶" },
+        { "from": "me", "t": "¿Quién es Toby?" },
+        { "from": "them", "t": "Mi perro. Se queda a vivir 🥰" },
+        { "from": "me", "t": "Soy *alérgico* a los perros 🤧" }
+      ]
+    },
+    {
+      "type": "versus",
+      "theme": "cream",
+      "dur": 4,
+      "title": "¿Quién tiene *razón*?",
+      "left": { "label": "Equipo perro", "items": ["Es mi familia", "Lo saco y lo limpio yo"] },
+      "right": { "label": "Equipo alérgico", "items": ["Es mi salud", "Nadie me preguntó"] }
+    },
+    {
+      "type": "text",
+      "theme": "olive",
+      "dur": 3.4,
+      "gap": 44,
+      "lines": [
+        { "t": "Esto se pacta *antes* de entrar.", "size": 100 },
+        { "t": "En Vive Conmigo ves si en el piso hay mascotas y tu % de compatibilidad.", "sans": true, "soft": true, "size": 48, "wait": 0.7 }
+      ]
+    },
+    {
+      "type": "cta",
+      "theme": "rust",
+      "dur": 2.8,
+      "title": "¿Equipo *perro* o equipo *alérgico*?",
+      "foot": "Comenta tu bando y etiqueta a tu compi 👇",
+      "size": 96
+    }
+  ]
+}
