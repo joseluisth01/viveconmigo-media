@@ -13,9 +13,34 @@
       "dur": 2.6,
       "label": "Mascotas en el piso",
       "lines": [
-        { "t": "Tu compi trae un *perro*.", "size": 112 },
-        { "t": "Tú eres *alérgico*.", "size": 112, "pop": true },
-        { "t": "¿Quién cede?", "sans": true, "size": 60, "wait": 0.5 }
+        {
+          "t": "Tu compi trae un *perro*.",
+          "size": 112
+        },
+        {
+          "t": "Tú eres *alérgico*.",
+          "size": 112,
+          "pop": true
+        },
+        {
+          "t": "¿Quién cede?",
+          "sans": true,
+          "size": 60,
+          "wait": 0.5
+        }
+      ],
+      "vo": [
+        {
+          "t": "¡Tu compi trae un perro!",
+          "pitch": "+8Hz",
+          "rate": "+15%",
+          "pause": 0.25
+        },
+        {
+          "t": "Y tú… eres alérgico.",
+          "pitch": "-4Hz",
+          "rate": "+8%"
+        }
       ]
     },
     {
@@ -24,19 +49,82 @@
       "dur": 5.4,
       "label": "Grupo del piso 🏠",
       "msgs": [
-        { "from": "them", "t": "Este finde viene Toby 🐶" },
-        { "from": "me", "t": "¿Quién es Toby?" },
-        { "from": "them", "t": "Mi perro. Se queda a vivir 🥰" },
-        { "from": "me", "t": "Soy *alérgico* a los perros 🤧" }
-      ]
+        {
+          "from": "them",
+          "t": "Este finde viene Toby 🐶"
+        },
+        {
+          "from": "me",
+          "t": "¿Quién es Toby?"
+        },
+        {
+          "from": "them",
+          "t": "Mi perro. Se queda a vivir 🥰"
+        },
+        {
+          "from": "me",
+          "t": "Soy *alérgico* a los perros 🤧"
+        }
+      ],
+      "vo": [
+        {
+          "t": "Te lo suelta así, por el grupo del piso:",
+          "rate": "+24%",
+          "pause": 0.15
+        },
+        {
+          "t": "«Este finde viene Toby».",
+          "pitch": "+12Hz",
+          "pause": 0.2
+        },
+        {
+          "t": "¿Toby? ¿Quién es Toby?",
+          "pitch": "+16Hz",
+          "rate": "+25%",
+          "pause": 0.2
+        },
+        {
+          "t": "Su perro. Y se queda a vivir.",
+          "pitch": "-3Hz"
+        }
+      ],
+      "voAt": 0.2
     },
     {
       "type": "versus",
       "theme": "cream",
       "dur": 4,
       "title": "¿Quién tiene *razón*?",
-      "left": { "label": "Equipo perro", "items": ["Es mi familia", "Lo saco y lo limpio yo"] },
-      "right": { "label": "Equipo alérgico", "items": ["Es mi salud", "Nadie me preguntó"] }
+      "left": {
+        "label": "Equipo perro",
+        "items": [
+          "Es mi familia",
+          "Lo saco y lo limpio yo"
+        ]
+      },
+      "right": {
+        "label": "Equipo alérgico",
+        "items": [
+          "Es mi salud",
+          "Nadie me preguntó"
+        ]
+      },
+      "vo": [
+        {
+          "t": "A ver… ¿quién tiene razón?",
+          "pitch": "+6Hz",
+          "pause": 0.2
+        },
+        {
+          "t": "¿Su familia…",
+          "pitch": "+12Hz",
+          "pause": 0.1
+        },
+        {
+          "t": "o tu salud?",
+          "pitch": "-4Hz"
+        }
+      ]
     },
     {
       "type": "text",
@@ -44,8 +132,30 @@
       "dur": 3.4,
       "gap": 44,
       "lines": [
-        { "t": "Esto se pacta *antes* de entrar.", "size": 100 },
-        { "t": "En Vive Conmigo ves si en el piso hay mascotas y tu % de compatibilidad.", "sans": true, "soft": true, "size": 48, "wait": 0.7 }
+        {
+          "t": "Esto se pacta *antes* de entrar.",
+          "size": 100
+        },
+        {
+          "t": "En Vive Conmigo ves si en el piso hay mascotas y tu % de compatibilidad.",
+          "sans": true,
+          "soft": true,
+          "size": 48,
+          "wait": 0.7
+        }
+      ],
+      "vo": [
+        {
+          "t": "Esto se pacta antes de entrar.",
+          "pitch": "-2Hz",
+          "rate": "+12%",
+          "pause": 0.2
+        },
+        {
+          "t": "En Vive Conmigo ves si hay mascotas en el piso antes de mudarte.",
+          "rate": "+24%",
+          "pitch": "+3Hz"
+        }
       ]
     },
     {
@@ -54,7 +164,28 @@
       "dur": 2.8,
       "title": "¿Equipo *perro* o equipo *alérgico*?",
       "foot": "Comenta tu bando y etiqueta a tu compi 👇",
-      "size": 96
+      "size": 96,
+      "vo": [
+        {
+          "t": "¿Equipo perro…",
+          "pitch": "+12Hz",
+          "pause": 0.08
+        },
+        {
+          "t": "o equipo alérgico?",
+          "pitch": "+4Hz",
+          "pause": 0.2
+        },
+        {
+          "t": "¡Comenta!",
+          "pitch": "+14Hz",
+          "rate": "+20%"
+        }
+      ]
     }
-  ]
+  ],
+  "voice": {
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "+18%"
+  }
 }
