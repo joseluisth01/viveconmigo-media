@@ -147,25 +147,31 @@ ya normalizados; `render.js` los mezcla con fundido de entrada y salida.
 - Si José dice que una canción no le gusta, quítala de `catalog.json` (y borra el mp3).
 - Para ampliar la biblioteca: SOLO pistas con licencia CC0 verificada en la página del álbum de FMA.
 
-### Voz en off (OBLIGATORIA desde 12/11/2026, voz de hombre EXPRESIVA)
-José quiere voz en off en todos los vídeos, con la voz de hombre **es-ES-AlvaroNeural** y que suene
-**expresiva** (nada de locución plana). Va dentro del vídeo, junto con la música (que baja sola cuando habla la voz).
+### Voz en off (OBLIGATORIA desde 12/11/2026): voz de hombre, EXPRESIVA y COMERCIAL
+José quiere voz en off en todos los vídeos con la voz de hombre **es-ES-AlvaroNeural**, expresiva y, sobre todo,
+**COMERCIAL**: la voz NO lee lo que pone en pantalla. La pantalla lleva el debate (los bandos, la pregunta);
+la voz **vende la web**: explica qué es Vive Conmigo y por qué te soluciona ese problema. Tono de anuncio cercano, no de locutor serio.
+- **Guion de la voz (siempre esta estructura, ~45-60 palabras en total):**
+  1. *Gancho* (escena 1): una pregunta sobre el problema del tema, con energía ("¿Y si tu nuevo compi tiene perro… y tú eres alérgico?").
+  2. *El dolor* (escena 2): por qué pasa ("Normalmente te enteras tarde: cuando ya te has mudado." / "Nadie lo habla antes de mudarse.").
+  3. *Qué es Vive Conmigo* (escenas 3-4): "Con Vive Conmigo lo sabes antes. Es la web de pisos compartidos donde conoces a la gente
+     del piso antes de mudarte: si fuman, si tienen mascotas, cómo limpian, sus horarios… y tu porcentaje de compatibilidad con cada uno."
+     Varía las palabras y el orden cada día (no siempre la misma frase) y, de vez en cuando, cuenta el otro diferencial:
+     "Y si ya vives en un piso, publica tu habitación para buscar compi aunque no seas el dueño."
+  4. *CTA* (última escena): "Encuentra con quién encajas en vive conmigo punto es" (o "Busca tu habitación en…", "Entra en…") +
+     la pregunta del bando corta ("¿Equipo perro o alérgico? ¡Comenta!").
+  Nada de promesas falsas ni cifras ("gratis", "miles de pisos"…) que no estén confirmadas. La web se dice "vive conmigo punto es".
 - En la raíz del spec: `"voice": {"voice": "es-ES-AlvaroNeural", "rate": "+18%"}` (opcional `gain` de la voz, por defecto 1.6,
   y `music` = volumen de la música bajo la voz, por defecto 0.45).
-- En cada escena: `"vo": [ {"t": "frase", "pitch": "+10Hz", "rate": "+22%", "pause": 0.2}, ... ]` (o un texto simple).
+- En cada escena: `"vo": [ {"t": "frase", "pitch": "+10Hz", "rate": "+22%", "pause": 0.15}, ... ]` (o un texto simple).
   La voz empieza a `voAt` s del inicio de la escena (0.15 por defecto). Si no cabe, `render.js` **alarga la escena sola**
-  (verás "escena N: x -> y s por la voz"); vigila que el vídeo no pase de ~24 s: si se alarga mucho, recorta texto.
-- Cómo hacer que suene expresiva (Edge no tiene estilos de emoción, se consigue así):
-  * Trocea cada escena en frases cortas (2-4 por escena) y dale a cada una su tono: preguntas y sorpresas más agudas
-    (`pitch` +8 a +16Hz, `rate` +20-25%), remates y frases serias más graves y algo más lentas (`pitch` -2 a -5Hz, `rate` +5-12%).
-  * Usa signos que cambian la entonación: ¡…!, ¿…?, puntos suspensivos para la pausa dramática, comillas para "citar" al compi.
-  * Pausas (`pause`) de 0.15-0.25 s antes del remate. Muletillas naturales y españolas ("A ver…", "Vale, pero…", "¿En serio?").
-  * La voz NO lee la pantalla palabra por palabra: la complementa con tono de colega que te lo cuenta. Tuteo, español de España.
-  * La primera frase es el gancho dicho con energía (empieza a los 0.15 s). La última vuelve a lanzar la pregunta del bando + "¡Comenta!".
-- `tools/tts.py` instala edge-tts si falta y usa el CA del proxy. Si la voz falla (sin red, error del servicio), renderiza sin `vo`,
-  publica igualmente y dilo en el resumen.
-- Comprueba el audio: volumedetect mean_volume > -35 dB y que el `.json` del vídeo tenga `"voice"`.
-- En el LOG añade `Voz: alvaro` en la columna de Hora/Vídeo.
+  (verás "escena N: x -> y s por la voz"); el vídeo no debe pasar de ~24 s: si se alarga más, recorta el guion.
+- Expresividad (Edge no tiene estilos de emoción, se consigue así): frases cortas, cada una con su tono; preguntas y gancho más agudos
+  y rápidos (`pitch` +8 a +12Hz, `rate` +20%), la explicación de la web viva (`rate` +20-24%), remates algo más graves (`pitch` -2 a -5Hz).
+  Signos ¡! ¿? y puntos suspensivos; pausas de 0.12-0.2 s entre frases.
+- `tools/tts.py` instala edge-tts si falta y usa el CA del proxy. Ejecuta node con `LANG=C.UTF-8`. Si la voz falla, renderiza
+  sin `vo`, publica igualmente y dilo en el resumen.
+- Comprueba el audio: volumedetect mean_volume > -35 dB y que el `.json` del vídeo tenga `"voice"`. En el LOG: `Voz: alvaro`.
 
 ### Portada (OBLIGATORIA)
 `cover: { kicker, title, theme, size? }` en la raíz del spec. Es lo que se ve en el perfil, así que
