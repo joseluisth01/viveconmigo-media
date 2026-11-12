@@ -31,19 +31,15 @@
       ],
       "vo": [
         {
-          "t": "¿Limpio…",
+          "t": "¿Tu compi dice que el baño «está limpio»…",
           "pitch": "+10Hz",
-          "pause": 0.1
-        },
-        {
-          "t": "o «yo no veo suciedad»?",
-          "pitch": "+4Hz",
           "rate": "+20%",
-          "pause": 0.2
+          "pause": 0.12
         },
         {
-          "t": "A ver quién tiene razón.",
-          "pitch": "-2Hz"
+          "t": "y tú no lo ves igual?",
+          "pitch": "+4Hz",
+          "rate": "+20%"
         }
       ]
     },
@@ -56,25 +52,9 @@
       "sub": "Y los platos, el *mismo día*.",
       "vo": [
         {
-          "t": "Opinión impopular:",
+          "t": "Esto pasa porque nadie lo habla antes de mudarse.",
           "pitch": "-3Hz",
-          "rate": "+10%",
-          "pause": 0.25
-        },
-        {
-          "t": "el baño se limpia cada semana.",
-          "pitch": "+2Hz",
-          "pause": 0.15
-        },
-        {
-          "t": "¡No cuando «se vea sucio»!",
-          "pitch": "+12Hz",
-          "rate": "+22%",
-          "pause": 0.15
-        },
-        {
-          "t": "Y los platos, el mismo día.",
-          "pitch": "-4Hz"
+          "rate": "+14%"
         }
       ]
     },
@@ -91,18 +71,15 @@
       "foot": "Comenta *A* o *B* 👇",
       "vo": [
         {
-          "t": "Tú decides:",
+          "t": "Por eso existe Vive Conmigo:",
           "pitch": "+6Hz",
+          "rate": "+14%",
           "pause": 0.15
         },
         {
-          "t": "¿A, cada semana con turnos…",
-          "pitch": "+10Hz",
-          "pause": 0.1
-        },
-        {
-          "t": "o B, cuando se vea sucio?",
-          "pitch": "+2Hz"
+          "t": "la web de pisos compartidos donde conoces a la gente del piso antes de entrar.",
+          "pitch": "+2Hz",
+          "rate": "+22%"
         }
       ]
     },
@@ -126,15 +103,15 @@
       ],
       "vo": [
         {
-          "t": "Esto se habla antes de mudarte.",
-          "pitch": "-2Hz",
-          "rate": "+12%",
-          "pause": 0.2
+          "t": "Si fuman, si tienen mascotas, cómo limpian, sus horarios…",
+          "pitch": "+4Hz",
+          "rate": "+22%",
+          "pause": 0.15
         },
         {
-          "t": "En Vive Conmigo ves cómo limpia la gente del piso y tu compatibilidad.",
-          "pitch": "+3Hz",
-          "rate": "+24%"
+          "t": "y tu porcentaje de compatibilidad con cada uno.",
+          "pitch": "-2Hz",
+          "rate": "+16%"
         }
       ]
     },
@@ -147,17 +124,13 @@
       "size": 100,
       "vo": [
         {
-          "t": "¿Limpio…",
-          "pitch": "+12Hz",
-          "pause": 0.08
-        },
-        {
-          "t": "o «no lo veo»?",
-          "pitch": "+4Hz",
+          "t": "Busca tu habitación en vive conmigo punto es.",
+          "pitch": "+3Hz",
+          "rate": "+18%",
           "pause": 0.2
         },
         {
-          "t": "¡Mándaselo a tu compi!",
+          "t": "¿Y tú, A o B? ¡Comenta!",
           "pitch": "+12Hz",
           "rate": "+20%"
         }

@@ -31,15 +31,15 @@
       ],
       "vo": [
         {
-          "t": "¡Tu compi trae un perro!",
-          "pitch": "+8Hz",
-          "rate": "+15%",
-          "pause": 0.25
+          "t": "¿Y si tu nuevo compi tiene perro…",
+          "pitch": "+10Hz",
+          "rate": "+20%",
+          "pause": 0.12
         },
         {
-          "t": "Y tú… eres alérgico.",
-          "pitch": "-4Hz",
-          "rate": "+8%"
+          "t": "y tú eres alérgico?",
+          "pitch": "+2Hz",
+          "rate": "+16%"
         }
       ]
     },
@@ -68,27 +68,17 @@
       ],
       "vo": [
         {
-          "t": "Te lo suelta así, por el grupo del piso:",
-          "rate": "+24%",
-          "pause": 0.15
+          "t": "Normalmente te enteras tarde:",
+          "pitch": "-2Hz",
+          "rate": "+16%",
+          "pause": 0.12
         },
         {
-          "t": "«Este finde viene Toby».",
-          "pitch": "+12Hz",
-          "pause": 0.2
-        },
-        {
-          "t": "¿Toby? ¿Quién es Toby?",
-          "pitch": "+16Hz",
-          "rate": "+25%",
-          "pause": 0.2
-        },
-        {
-          "t": "Su perro. Y se queda a vivir.",
-          "pitch": "-3Hz"
+          "t": "cuando ya te has mudado.",
+          "pitch": "-5Hz",
+          "rate": "+12%"
         }
-      ],
-      "voAt": 0.2
+      ]
     },
     {
       "type": "versus",
@@ -111,18 +101,15 @@
       },
       "vo": [
         {
-          "t": "A ver… ¿quién tiene razón?",
-          "pitch": "+6Hz",
-          "pause": 0.2
+          "t": "Con Vive Conmigo lo sabes antes.",
+          "pitch": "+8Hz",
+          "rate": "+16%",
+          "pause": 0.15
         },
         {
-          "t": "¿Su familia…",
-          "pitch": "+12Hz",
-          "pause": 0.1
-        },
-        {
-          "t": "o tu salud?",
-          "pitch": "-4Hz"
+          "t": "Es la web de pisos compartidos donde conoces a la gente del piso antes de mudarte.",
+          "pitch": "+2Hz",
+          "rate": "+22%"
         }
       ]
     },
@@ -146,15 +133,15 @@
       ],
       "vo": [
         {
-          "t": "Esto se pacta antes de entrar.",
-          "pitch": "-2Hz",
-          "rate": "+12%",
-          "pause": 0.2
+          "t": "Mascotas, tabaco, limpieza, horarios…",
+          "pitch": "+4Hz",
+          "rate": "+20%",
+          "pause": 0.15
         },
         {
-          "t": "En Vive Conmigo ves si hay mascotas en el piso antes de mudarte.",
-          "rate": "+24%",
-          "pitch": "+3Hz"
+          "t": "y tu porcentaje de compatibilidad con cada uno.",
+          "pitch": "-2Hz",
+          "rate": "+16%"
         }
       ]
     },
@@ -167,18 +154,14 @@
       "size": 96,
       "vo": [
         {
-          "t": "¿Equipo perro…",
-          "pitch": "+12Hz",
-          "pause": 0.08
-        },
-        {
-          "t": "o equipo alérgico?",
-          "pitch": "+4Hz",
+          "t": "Encuentra con quién encajas en vive conmigo punto es.",
+          "pitch": "+3Hz",
+          "rate": "+18%",
           "pause": 0.2
         },
         {
-          "t": "¡Comenta!",
-          "pitch": "+14Hz",
+          "t": "¿Equipo perro o alérgico? ¡Comenta!",
+          "pitch": "+12Hz",
           "rate": "+20%"
         }
       ]
