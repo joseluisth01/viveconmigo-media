@@ -13,9 +13,38 @@
       "dur": 2.5,
       "label": "Limpieza en el piso",
       "lines": [
-        { "t": "Limpio *vs*", "size": 124 },
-        { "t": "«yo no veo suciedad».", "size": 108, "pop": true },
-        { "t": "¿Quién tiene razón?", "sans": true, "size": 56, "wait": 0.5 }
+        {
+          "t": "Limpio *vs*",
+          "size": 124
+        },
+        {
+          "t": "«yo no veo suciedad».",
+          "size": 108,
+          "pop": true
+        },
+        {
+          "t": "¿Quién tiene razón?",
+          "sans": true,
+          "size": 56,
+          "wait": 0.5
+        }
+      ],
+      "vo": [
+        {
+          "t": "¿Limpio…",
+          "pitch": "+10Hz",
+          "pause": 0.1
+        },
+        {
+          "t": "o «yo no veo suciedad»?",
+          "pitch": "+4Hz",
+          "rate": "+20%",
+          "pause": 0.2
+        },
+        {
+          "t": "A ver quién tiene razón.",
+          "pitch": "-2Hz"
+        }
       ]
     },
     {
@@ -24,7 +53,30 @@
       "dur": 3.2,
       "title": "El baño se limpia *cada semana*. No cuando «se vea sucio».",
       "size": 98,
-      "sub": "Y los platos, el *mismo día*."
+      "sub": "Y los platos, el *mismo día*.",
+      "vo": [
+        {
+          "t": "Opinión impopular:",
+          "pitch": "-3Hz",
+          "rate": "+10%",
+          "pause": 0.25
+        },
+        {
+          "t": "el baño se limpia cada semana.",
+          "pitch": "+2Hz",
+          "pause": 0.15
+        },
+        {
+          "t": "¡No cuando «se vea sucio»!",
+          "pitch": "+12Hz",
+          "rate": "+22%",
+          "pause": 0.15
+        },
+        {
+          "t": "Y los platos, el mismo día.",
+          "pitch": "-4Hz"
+        }
+      ]
     },
     {
       "type": "poll",
@@ -36,7 +88,23 @@
         "Cada semana, con turnos fijos",
         "Cuando se vea sucio, sin dramas"
       ],
-      "foot": "Comenta *A* o *B* 👇"
+      "foot": "Comenta *A* o *B* 👇",
+      "vo": [
+        {
+          "t": "Tú decides:",
+          "pitch": "+6Hz",
+          "pause": 0.15
+        },
+        {
+          "t": "¿A, cada semana con turnos…",
+          "pitch": "+10Hz",
+          "pause": 0.1
+        },
+        {
+          "t": "o B, cuando se vea sucio?",
+          "pitch": "+2Hz"
+        }
+      ]
     },
     {
       "type": "text",
@@ -44,8 +112,30 @@
       "dur": 3.2,
       "gap": 44,
       "lines": [
-        { "t": "Esto se habla *antes* de mudarte.", "size": 100 },
-        { "t": "En Vive Conmigo ves cómo limpia la gente del piso y tu % de compatibilidad.", "sans": true, "soft": true, "size": 48, "wait": 0.7 }
+        {
+          "t": "Esto se habla *antes* de mudarte.",
+          "size": 100
+        },
+        {
+          "t": "En Vive Conmigo ves cómo limpia la gente del piso y tu % de compatibilidad.",
+          "sans": true,
+          "soft": true,
+          "size": 48,
+          "wait": 0.7
+        }
+      ],
+      "vo": [
+        {
+          "t": "Esto se habla antes de mudarte.",
+          "pitch": "-2Hz",
+          "rate": "+12%",
+          "pause": 0.2
+        },
+        {
+          "t": "En Vive Conmigo ves cómo limpia la gente del piso y tu compatibilidad.",
+          "pitch": "+3Hz",
+          "rate": "+24%"
+        }
       ]
     },
     {
@@ -54,7 +144,28 @@
       "dur": 2.6,
       "title": "¿Limpio o *«no lo veo»*?",
       "foot": "Mándaselo a tu compi 👇",
-      "size": 100
+      "size": 100,
+      "vo": [
+        {
+          "t": "¿Limpio…",
+          "pitch": "+12Hz",
+          "pause": 0.08
+        },
+        {
+          "t": "o «no lo veo»?",
+          "pitch": "+4Hz",
+          "pause": 0.2
+        },
+        {
+          "t": "¡Mándaselo a tu compi!",
+          "pitch": "+12Hz",
+          "rate": "+20%"
+        }
+      ]
     }
-  ]
+  ],
+  "voice": {
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "+18%"
+  }
 }
