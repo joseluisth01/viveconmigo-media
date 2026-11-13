@@ -51,6 +51,8 @@ Google España** búsquedas reales de estudiantes y gente que comparte piso, y l
   `![alt](ruta "pie")`.
 - **NO tablas** (salen como texto con `|`): usa listas "**Concepto**: A…; B…".
 - **Cada párrafo/línea separada por una línea en blanco**: dos líneas seguidas sin hueco se juntan en un solo párrafo.
+- **Excepción: los elementos de una misma lista van SIN línea en blanco entre ellos** (si los separas, cada `1.` empieza
+  una lista nueva y todos salen numerados como "1."). Línea en blanco antes y después de la lista, no dentro.
 
 ## 3. Interlinking (obligatorio, mucho)
 - **Salientes**: mínimo **5 enlaces internos a artículos del blog** relacionados (anchor descriptivo con la keyword del
