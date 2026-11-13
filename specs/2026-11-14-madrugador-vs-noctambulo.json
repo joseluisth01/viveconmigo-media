@@ -1,0 +1,161 @@
+{
+  "cover": {
+    "kicker": "Convivencia A o B",
+    "title": "¿Madrugador o *noctámbulo*? Elige bando",
+    "theme": "rust",
+    "size": 108
+  },
+  "music": "loyalty-frea-roller-fever",
+  "voice": {
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "+18%"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "theme": "cream",
+      "dur": 2.6,
+      "label": "Horarios en el piso",
+      "lines": [
+        {
+          "t": "Tú te levantas a las *7*.",
+          "size": 108
+        },
+        {
+          "t": "Tu compi se acuesta a las *4*.",
+          "size": 108,
+          "pop": true
+        },
+        {
+          "t": "¿Quién molesta a quién?",
+          "sans": true,
+          "size": 60,
+          "wait": 0.5
+        }
+      ],
+      "vo": [
+        {
+          "t": "¿Tú madrugas…",
+          "pitch": "+10Hz",
+          "rate": "+20%",
+          "pause": 0.12
+        },
+        {
+          "t": "y tu compi vive de noche?",
+          "pitch": "+6Hz",
+          "rate": "+20%"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "theme": "terra",
+      "dur": 2.3,
+      "title": "Equipo *mañana*",
+      "sub": "Ducha y café a las 7. Persiana arriba.",
+      "vo": [
+        {
+          "t": "Nadie lo pregunta antes de mudarse…",
+          "pitch": "-2Hz",
+          "rate": "+18%"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "theme": "ink",
+      "dur": 2.3,
+      "title": "Equipo *noche*",
+      "sub": "Cena a la 1. Serie hasta las 3.",
+      "vo": [
+        {
+          "t": "¡y luego no duerme nadie!",
+          "pitch": "-4Hz",
+          "rate": "+16%"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "theme": "olive",
+      "dur": 4,
+      "gap": 44,
+      "lines": [
+        {
+          "t": "Mi bando: de noche, *silencio*.",
+          "size": 100
+        },
+        {
+          "t": "Esto se habla *antes* de mudarte, no a las 4 de la mañana.",
+          "sans": true,
+          "soft": true,
+          "size": 48,
+          "wait": 0.7
+        }
+      ],
+      "vo": [
+        {
+          "t": "Por eso existe Vive Conmigo:",
+          "pitch": "+8Hz",
+          "rate": "+18%",
+          "pause": 0.12
+        },
+        {
+          "t": "la web de pisos compartidos donde ves cómo vive la gente del piso antes de entrar.",
+          "pitch": "+2Hz",
+          "rate": "+24%",
+          "pause": 0.12
+        }
+      ]
+    },
+    {
+      "type": "chips",
+      "theme": "cream",
+      "dur": 3.6,
+      "label": "En Vive Conmigo",
+      "title": "ves cómo vive el piso *antes* de entrar.",
+      "chips": [
+        "Horarios",
+        "Ruido",
+        "Tabaco",
+        "Mascotas",
+        "Limpieza"
+      ],
+      "foot": "+ tu % de compatibilidad con cada uno.",
+      "vo": [
+        {
+          "t": "Sus horarios, si fuman, si tienen mascotas…",
+          "pitch": "+4Hz",
+          "rate": "+22%",
+          "pause": 0.12
+        },
+        {
+          "t": "y tu porcentaje de compatibilidad.",
+          "pitch": "-3Hz",
+          "rate": "+18%"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "theme": "terra",
+      "dur": 3,
+      "title": "¿Equipo *mañana* o equipo *noche*?",
+      "foot": "Escribe 1 o 2 y mándaselo a tu compi 👇",
+      "size": 96,
+      "vo": [
+        {
+          "t": "Busca tu habitación en vive conmigo punto es.",
+          "pitch": "+3Hz",
+          "rate": "+18%",
+          "pause": 0.2
+        },
+        {
+          "t": "¿Mañana o noche? ¡Comenta!",
+          "pitch": "+12Hz",
+          "rate": "+20%"
+        }
+      ]
+    }
+  ]
+}
