@@ -1,7 +1,7 @@
 # Vive Conmigo · Playbook de vídeos para redes
 
 Instrucciones para la tarea programada que crea un vídeo vertical, lo sube a este repo
-y lo programa en Metricool (Instagram Reel + TikTok) para el día siguiente.
+y lo programa en Metricool (Instagram Reel + TikTok) para el MISMO DÍA (desde el 18/11/2026).
 
 ## Marca
 - Producto: **Vive Conmigo** (vive-conmigo.es). Web de pisos compartidos donde ves los hábitos
@@ -187,7 +187,7 @@ imágenes antes de renderizar: que no se corte ningún texto y que nada quede fu
 
 ## Publicación (desde el 11/11/2026)
 Instagram va por **Buffer** (diario, sin límite mensual) y TikTok por **Metricool** (plan gratis: máx. 20
-publicaciones publicadas al mes; se aprovechan TODAS). Hora: el día siguiente a la mejor hora entre 17:00 y 21:00.
+publicaciones publicadas al mes; se aprovechan TODAS). Hora: el MISMO DÍA de la ejecución, a la mejor hora entre 17:00 y 21:00.
 
 ### Hora
 - getBestTimeToPostByNetwork (Metricool, brandId 7884043, tz Europe/Madrid) para tiktok e instagram del día
