@@ -1,0 +1,131 @@
+{
+  "cover": {
+    "kicker": "Fumador vs no fumador",
+    "title": "Fumar en el balcón: *¿cuenta?*",
+    "theme": "olive",
+    "size": 116
+  },
+  "music": "loyalty-frea-enby",
+  "voice": {
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "+18%"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "theme": "ink",
+      "dur": 2.8,
+      "label": "Tabaco en el piso",
+      "lines": [
+        {
+          "t": "Tu compi fuma *en el balcón*.",
+          "size": 108
+        },
+        {
+          "t": "El humo entra en *tu cuarto*.",
+          "size": 108,
+          "pop": true
+        },
+        {
+          "t": "¿Eso es fumar en casa?",
+          "sans": true,
+          "size": 60,
+          "wait": 0.5
+        }
+      ],
+      "vo": [
+        {
+          "t": "¿Tu compi fuma en el balcón…",
+          "pitch": "+10Hz",
+          "rate": "+20%",
+          "pause": 0.12
+        },
+        {
+          "t": "y el humo acaba en tu cuarto?",
+          "pitch": "+7Hz",
+          "rate": "+20%"
+        }
+      ]
+    },
+    {
+      "type": "poll",
+      "theme": "sand",
+      "dur": 4.6,
+      "label": "Fumador vs no fumador",
+      "title": "El balcón, ¿es *fuera* o es *casa*?",
+      "options": [
+        "Es fuera: puede fumar tranquilo",
+        "Es casa: el humo entra igual"
+      ],
+      "foot": "Comenta *A* o *B* 👇",
+      "vo": [
+        {
+          "t": "Nadie lo habla antes de mudarse…",
+          "pitch": "-2Hz",
+          "rate": "+18%",
+          "pause": 0.15
+        },
+        {
+          "t": "¡y luego llegan los roces!",
+          "pitch": "-4Hz",
+          "rate": "+16%"
+        }
+      ]
+    },
+    {
+      "type": "chips",
+      "theme": "cream",
+      "dur": 4.2,
+      "label": "En Vive Conmigo",
+      "title": "sabes si en el piso se fuma *antes* de mudarte.",
+      "chips": [
+        "Tabaco",
+        "Balcón",
+        "Limpieza",
+        "Mascotas",
+        "Horarios"
+      ],
+      "foot": "+ tu % de compatibilidad con cada uno.",
+      "vo": [
+        {
+          "t": "Con Vive Conmigo lo sabes antes.",
+          "pitch": "+8Hz",
+          "rate": "+18%",
+          "pause": 0.12
+        },
+        {
+          "t": "Es la web de pisos compartidos donde ves si la gente del piso fuma, cómo limpia, sus horarios…",
+          "pitch": "+2Hz",
+          "rate": "+24%",
+          "pause": 0.12
+        },
+        {
+          "t": "y tu porcentaje de compatibilidad.",
+          "pitch": "-3Hz",
+          "rate": "+18%"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "theme": "olive",
+      "dur": 3.0,
+      "title": "Balcón: ¿*A* o *B*?",
+      "foot": "Comenta y etiqueta a tu compi 👇",
+      "size": 104,
+      "vo": [
+        {
+          "t": "Encuentra con quién encajas en vive conmigo punto es.",
+          "pitch": "+3Hz",
+          "rate": "+18%",
+          "pause": 0.2
+        },
+        {
+          "t": "¿A o B? ¡Comenta!",
+          "pitch": "+12Hz",
+          "rate": "+20%"
+        }
+      ]
+    }
+  ]
+}
