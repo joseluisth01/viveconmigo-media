@@ -6,3 +6,4 @@
 | 2026-11-12 | companero-de-piso-no-limpia | mi compañero de piso no limpia | convivir-bien | terra · svg propio (platos sucios) | como-dividir-gastos-piso-compartido, buscar-companero-de-piso-sin-ser-propietario |
 | 2026-11-13 | estudiar-en-piso-compartido | estudiar en un piso compartido | convivir-bien | ink · svg propio (escritorio, libro, cascos, flexo) | residencia-o-piso-compartido, companero-de-piso-no-limpia |
 | 2026-11-18 | que-llevar-piso-estudiantes | qué llevar a un piso de estudiantes | buscar-piso | olive · maleta (+card checklist) | estudiar-en-piso-compartido, como-buscar-piso-compartido-guia-completa |
+| 2026-11-19 | pareja-en-piso-compartido | pareja en piso compartido | convivir-bien | cream · svg propio (cama con pareja, luna, card grupo del piso) | guia-convivir-bien-piso-compartido, como-dividir-gastos-piso-compartido |
