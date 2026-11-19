@@ -77,7 +77,7 @@ Google España** búsquedas reales de estudiantes y gente que comparte piso, y l
   Puedes añadir motivos nuevos a cover.html si los vas a reutilizar.
 - Título de portada corto (2-6 palabras), NO el H1 entero. Tema de color distinto al de la portada anterior.
 - **Zona segura**: la web recorta con object-cover (cabecera 2.4:1 y móvil 1.35:1). Todo lo importante dentro de
-  x 200-1400 e y 125-775 (el layout ya lo respeta; si añades cards, que no se salgan). MIRA la imagen con Read.
+  x 260-1340 e y 125-775 (la tarjeta móvil real mide ~1.22:1 y recorta ~250 px por cada lado; el layout ya lo respeta; si añades cards, que no se salgan). MIRA la imagen con Read.
 - Sube: commit + push del jpg al repo, URL jsDelivr con SHA → `blog_upload_image {url}` → usa la `ruta` como `cover`.
 
 ## 5. Publicar y comprobar
