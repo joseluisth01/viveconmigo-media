@@ -1,0 +1,51 @@
+{
+  "cover": { "kicker": "Cómo funciona", "title": "Conoce a tus compis *antes* de mudarte", "theme": "terra", "size": 110 },
+  "music": "loyalty-frea-hug-convoy",
+  "voice": { "voice": "es-ES-AlvaroNeural", "rate": "+18%" },
+  "scenes": [
+    { "type": "hook", "theme": "rust", "dur": 2.5, "label": "Así funciona Vive Conmigo",
+      "lines": [
+        { "t": "¿Y si conocieras a tus compis", "size": 104 },
+        { "t": "*antes* de mudarte?", "size": 116, "pop": true }
+      ],
+      "vo": [
+        { "t": "¿Y si supieras con quién vas a vivir…", "pitch": "+10Hz", "rate": "+20%", "pause": 0.1 },
+        { "t": "antes de mudarte?", "pitch": "+12Hz", "rate": "+18%" }
+      ] },
+    { "type": "versus", "theme": "ink", "dur": 4, "title": "No buscamos pisos. *Emparejamos personas.*",
+      "left": { "label": "Otras webs", "items": ["Fotos", "Precio", "Mensajes a ciegas"] },
+      "right": { "label": "Vive Conmigo", "items": ["Quién vive", "Sus hábitos", "Tu % de compatibilidad"] },
+      "vo": [
+        { "t": "En las demás webs solo ves fotos y precio.", "pitch": "-3Hz", "rate": "+20%", "pause": 0.12 },
+        { "t": "¡Aquí ves a las personas!", "pitch": "+8Hz", "rate": "+18%" }
+      ] },
+    { "type": "item", "theme": "cream", "dur": 2.3, "title": "Crea tu *perfil*", "sub": "Horarios, hábitos y manías.",
+      "vo": [ { "t": "Creas tu perfil de convivencia,", "pitch": "+4Hz", "rate": "+22%" } ] },
+    { "type": "item", "theme": "sand", "dur": 2.3, "title": "Mira tu *%* en cada piso", "sub": "Con los que ya viven allí.",
+      "vo": [ { "t": "ves cada piso con tu porcentaje de compatibilidad…", "pitch": "+2Hz", "rate": "+24%" } ] },
+    { "type": "item", "theme": "cream", "dur": 2.3, "title": "Conoce a tus *compis*", "sub": "Sin sorpresas al mudarte.",
+      "vo": [ { "t": "conoces los hábitos de cada compañero…", "pitch": "+2Hz", "rate": "+24%" } ] },
+    { "type": "item", "theme": "sand", "dur": 2.3, "title": "Habla y *visita*", "sub": "Desde la misma web.",
+      "vo": [ { "t": "y hablas y visitas desde la misma web.", "pitch": "-3Hz", "rate": "+20%" } ] },
+    { "type": "profile", "theme": "olive", "dur": 4.4, "title": "Así ves a cada *compi*.", "name": "Lucía, 24", "tag": "Enfermera · madrugadora", "pct": 86,
+      "rows": [
+        { "good": true, "k": "Encajáis:", "v": "horarios y limpieza" },
+        { "good": true, "k": "Igual:", "v": "no fuma, sin mascotas" },
+        { "good": false, "k": "A hablar:", "v": "visitas el finde" }
+      ],
+      "vo": [
+        { "t": "Horarios, limpieza, tabaco, mascotas, ruido…", "pitch": "+4Hz", "rate": "+22%", "pause": 0.12 },
+        { "t": "todo cuenta en tu porcentaje.", "pitch": "-3Hz", "rate": "+18%" }
+      ] },
+    { "type": "chips", "theme": "cream", "dur": 3.5, "label": "¿Te sobra una habitación?", "title": "Publícala aunque *no seas el dueño*.",
+      "chips": ["Gratis", "Sin comisión", "Candidatos con su %"],
+      "vo": [
+        { "t": "¿Te sobra una habitación? ¡Publícala aunque no seas el dueño!", "pitch": "+6Hz", "rate": "+22%" }
+      ] },
+    { "type": "cta", "theme": "terra", "dur": 3.4, "title": "Crea tu perfil *gratis*.", "foot": "¿Qué miras tú primero? Comenta 👇",
+      "vo": [
+        { "t": "Es gratis. Crea tu perfil en vive conmigo punto es.", "pitch": "+3Hz", "rate": "+18%", "pause": 0.15 },
+        { "t": "¿Tú qué miras primero? ¡Comenta!", "pitch": "+10Hz", "rate": "+20%" }
+      ] }
+  ]
+}
