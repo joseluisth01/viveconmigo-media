@@ -7,3 +7,4 @@
 | 2026-11-13 | estudiar-en-piso-compartido | estudiar en un piso compartido | convivir-bien | ink · svg propio (escritorio, libro, cascos, flexo) | residencia-o-piso-compartido, companero-de-piso-no-limpia |
 | 2026-11-18 | que-llevar-piso-estudiantes | qué llevar a un piso de estudiantes | buscar-piso | olive · maleta (+card checklist) | estudiar-en-piso-compartido, como-buscar-piso-compartido-guia-completa |
 | 2026-11-19 | pareja-en-piso-compartido | pareja en piso compartido | convivir-bien | cream · svg propio (cama con pareja, luna, card grupo del piso) | guia-convivir-bien-piso-compartido, como-dividir-gastos-piso-compartido |
+| 2026-11-20 | companero-de-piso-fuma | compañero de piso fuma (en casa) | convivir-bien | sand · svg propio (ventana con humo, cigarro prohibido, cenicero, card normas) | buscar-companero-de-piso-sin-ser-propietario, companero-de-piso-no-limpia |
