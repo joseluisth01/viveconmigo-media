@@ -31,6 +31,12 @@ def channels():
 
 def pick(service):
     cands = [c for c in channels() if c["service"].lower() == service and GUARD in (c["name"] + " " + (c.get("displayName") or "")).lower()]
+    if len(cands) == 0:
+        # Canal aún no conectado en Buffer: no es un fallo del workflow (evita el correo de GitHub);
+        # la tarea lee este mensaje y usa el reparto antiguo.
+        print(f"Esperaba 1 canal {service} de viveconmigo y hay 0")
+        print("RESULT_JSON=" + json.dumps({"__typename": "NoChannel", "service": service}))
+        sys.exit(0)
     if len(cands) != 1:
         sys.exit(f"Esperaba 1 canal {service} de viveconmigo y hay {len(cands)}: {cands}")
     return cands[0]
