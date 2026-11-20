@@ -1,0 +1,163 @@
+{
+  "cover": {
+    "kicker": "POV: llega el frío",
+    "title": "¿Manta o *calefacción* a 24°?",
+    "theme": "ink",
+    "size": 112
+  },
+  "music": "loyalty-frea-coexistenz",
+  "voice": {
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "+18%"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "theme": "sand",
+      "dur": 2.6,
+      "label": "Calefacción en el piso",
+      "lines": [
+        {
+          "t": "POV: es noviembre.",
+          "sans": true,
+          "size": 60
+        },
+        {
+          "t": "Tú: *manta* y sudadera.",
+          "size": 104
+        },
+        {
+          "t": "Tu compi: *24°* y manga corta.",
+          "size": 104,
+          "pop": true
+        }
+      ],
+      "vo": [
+        {
+          "t": "¿Tú eres de manta y sudadera…",
+          "pitch": "+10Hz",
+          "rate": "+20%",
+          "pause": 0.12
+        },
+        {
+          "t": "y tu compi, de veinticuatro grados en manga corta?",
+          "pitch": "+8Hz",
+          "rate": "+22%"
+        }
+      ]
+    },
+    {
+      "type": "chat",
+      "theme": "cream",
+      "dur": 5.0,
+      "label": "Grupo del piso 🏠",
+      "msgs": [
+        {
+          "from": "them",
+          "t": "¿Quién ha bajado la calefacción? 🥶"
+        },
+        {
+          "from": "me",
+          "t": "Yo. Estábamos a 24° 🥵"
+        },
+        {
+          "from": "them",
+          "t": "Pues yo me congelo"
+        },
+        {
+          "from": "me",
+          "t": "Ponte *otra sudadera* 😅"
+        }
+      ],
+      "vo": [
+        {
+          "t": "Esto nadie lo pregunta antes de mudarse…",
+          "pitch": "-2Hz",
+          "rate": "+18%",
+          "pause": 0.12
+        },
+        {
+          "t": "¡hasta que empieza la guerra del termostato!",
+          "pitch": "-4Hz",
+          "rate": "+16%"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "theme": "rust",
+      "dur": 2.8,
+      "gap": 40,
+      "lines": [
+        {
+          "t": "Mi bando: *manta* y sudadera.",
+          "size": 100
+        },
+        {
+          "t": "La convivencia se habla *antes* de mudarte, no con la primera factura.",
+          "sans": true,
+          "soft": true,
+          "size": 48,
+          "wait": 0.6
+        }
+      ],
+      "vo": [
+        {
+          "t": "Con Vive Conmigo lo ves antes.",
+          "pitch": "+8Hz",
+          "rate": "+18%",
+          "pause": 0.12
+        }
+      ]
+    },
+    {
+      "type": "chips",
+      "theme": "ink",
+      "dur": 4.2,
+      "label": "En Vive Conmigo",
+      "title": "conoces a la gente del piso *antes* de mudarte.",
+      "chips": [
+        "Horarios",
+        "Limpieza",
+        "Tabaco",
+        "Mascotas",
+        "Ruido"
+      ],
+      "foot": "+ tu % de compatibilidad con cada uno.",
+      "vo": [
+        {
+          "t": "Es la web de pisos compartidos donde conoces a tus futuros compis: sus horarios, cómo limpian, si fuman…",
+          "pitch": "+2Hz",
+          "rate": "+24%",
+          "pause": 0.12
+        },
+        {
+          "t": "y tu porcentaje de compatibilidad con cada uno.",
+          "pitch": "-3Hz",
+          "rate": "+18%"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "theme": "olive",
+      "dur": 3.2,
+      "title": "¿Equipo *manta* o equipo *24°*?",
+      "foot": "Comenta tu bando y etiqueta a tu compi",
+      "size": 96,
+      "vo": [
+        {
+          "t": "Busca tu habitación en vive conmigo punto es.",
+          "pitch": "+3Hz",
+          "rate": "+18%",
+          "pause": 0.2
+        },
+        {
+          "t": "¿Manta o calefacción? ¡Comenta!",
+          "pitch": "+12Hz",
+          "rate": "+20%"
+        }
+      ]
+    }
+  ]
+}
