@@ -12,7 +12,7 @@ y lo programa en Metricool (Instagram Reel + TikTok) para el MISMO DÍA (desde e
 - Tono: cercano, con humor de piso compartido, tú a tú, frases cortas. Nada de promesas falsas,
   cifras inventadas ni testimonios inventados. Los perfiles que aparezcan llevan "Perfil de ejemplo"
   (el motor lo añade solo en la escena `profile`).
-- Registro de humor: situaciones reconocibles (platos, fiestas, papel, calefacción, horarios,
+- Registro de humor: situaciones reconocibles (platos, fiestas, papel, horarios,
   tabaco, visitas, ruido, la nevera, el baño, la fianza). Sin estereotipos de grupos.
 
 ## Estructura de un vídeo (18–28 s)
@@ -29,15 +29,18 @@ opinar en comentarios.
 José quiere vídeos de **rivalidad**: temas que dividen de verdad a quien comparte piso y que son
 justo lo que Vive Conmigo hace visible *antes* de mudarte (hábitos del piso + % de compatibilidad).
 Prioriza SIEMPRE los temas que **deciden si dos personas pueden convivir**, no las manías menores.
-- **Temas de peso (usar casi siempre):** tabaco (fumar dentro, en el balcón, que huela la casa), mascotas
-  (perros, gatos, alergias, pelos, ruido), **limpieza** (qué es "limpio", cada cuánto se limpia el baño,
-  platos, turnos, quién limpia lo común), horarios y sueño (madrugadores vs noctámbulos, turnos),
-  ruido y fiestas, visitas y parejas que se quedan, alcohol/fiesta, teletrabajo y silencio, edad
-  (estudiantes con trabajadores o mayores), chicos/chicas/mixto, dinero y reparto de gastos, orden y zonas comunes,
-  respeto a la intimidad, cocinar/olores, temperatura (calefacción/aire).
-- **Temas menores (EVITAR como tema central):** quién tiene balda en la nevera, etiquetar la comida,
-  el orden de las toallas, el color de las cortinas… Solo pueden salir como gag secundario dentro de un
-  vídeo de otro tema, nunca como idea principal.
+- **SOLO temas de peso (instrucción de José 20/11/2026: "tienen que ser cosas que de verdad importen"):**
+  1. **Hábitos de convivencia**: limpieza (qué es "limpio", baño, platos, turnos), tabaco (fumar DENTRO del piso),
+     fiestas en casa (fiestero vs tranquilo), alcohol, horarios y sueño (madrugador vs noctámbulo), ruido.
+  2. **Perfil y estilo de vida**: estudia vs trabaja (horarios opuestos, exámenes vs vida laboral), que estudien
+     lo mismo o no (misma carrera = apuntes y amigos en común vs desconectar), edad (estudiantes con mayores),
+     chicos/chicas/mixto, teletrabajo y silencio.
+  3. **Convivencia con terceros**: mascotas (perros, gatos, alergias), visitas y parejas que se quedan a dormir.
+  4. **Dinero**: el que no paga a tiempo, reparto de gastos.
+- **PROHIBIDOS como tema (ni de vídeo entero ni de gag central):** calefacción/temperatura/aire, comida y gustos
+  (lechuga, dieta, cocinar, olores), balda de la nevera, etiquetar comida, toallas, cortinas, decoración y cualquier
+  manía menor que no decida si dos personas pueden vivir juntas. Pregunta de control antes de elegir: "¿alguien
+  rechazaría un piso por esto?" Si la respuesta no es un SÍ claro, no vale.
 - **Estructura de rivalidad:** pon a dos bandos frente a frente ("fumador vs no fumador", "dueño de perro vs
   alérgico", "limpio vs 'yo no veo suciedad'", "madrugador vs noctámbulo") con A o B / ¿quién tiene razón? /
   "Comenta A o B". Siempre respetuoso: se discute el hábito, nunca se ridiculiza a una persona o grupo.
@@ -74,12 +77,12 @@ Diseña cada vídeo para eso:
 - Mascotas: ¿perro o gato en el piso? ¿y si uno es alérgico? ¿quién lo cuida y quién limpia los pelos?
 - Limpieza: ¿cada cuánto se limpia el baño? ¿qué es "limpio" para ti? ¿turnos o "el que lo ve, lo limpia"?
 - Platos sucios: ¿cuántas horas son aceptables? ¿Quién limpia las zonas comunes si uno es más maniático?
+- Teletrabajo vs estudiante: silencio en horario laboral, llamadas, el que está en casa todo el día.
+- Estudia vs trabaja: horarios opuestos, época de exámenes vs vida laboral; ¿vivir con alguien de tu misma carrera?
+- Fiestero vs tranquilo: ¿cuántas fiestas al mes son aceptables en un piso compartido?
 - Madrugador vs noctámbulo: ruido por la mañana y por la noche, aspiradora, música, llegar a las 4.
 - Fiesta: ¿cuántas veces al mes se puede invitar gente? ¿y si el otro tiene examen o trabaja temprano?
 - Alcohol y fiesta en casa vs piso tranquilo.
-- Teletrabajo: silencio en horario laboral y reparto de la factura de luz/calefacción.
-- Calefacción y aire: ¿a cuántos grados? ¿quién decide?
-- Cocinar: olores, ajos, pescado, fritos; ¿se comparte comida o cada uno la suya?
 - La pareja que se queda a dormir casi todos los días: ¿debe pagar?
 - La habitación grande: ¿paga lo mismo o más?
 - ¿Dividir la luz a partes iguales si uno trabaja desde casa todo el día?
