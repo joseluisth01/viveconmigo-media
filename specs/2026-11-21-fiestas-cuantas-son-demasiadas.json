@@ -1,0 +1,149 @@
+{
+  "cover": {
+    "kicker": "Fiestero vs tranquilo",
+    "title": "¿Cuántas *fiestas* son demasiadas?",
+    "theme": "olive",
+    "size": 112
+  },
+  "music": "loyalty-frea-can-t-stop-my-feet",
+  "voice": {
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "+18%"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "theme": "terra",
+      "dur": 2.4,
+      "label": "Fiestas en el piso",
+      "lines": [
+        {
+          "t": "¿Cuántas *fiestas*",
+          "size": 110
+        },
+        {
+          "t": "al mes son",
+          "size": 110
+        },
+        {
+          "t": "*demasiadas*?",
+          "size": 110,
+          "pop": true
+        },
+        {
+          "t": "En un piso compartido.",
+          "sans": true,
+          "size": 52
+        }
+      ],
+      "vo": [
+        {
+          "t": "¿Cuántas fiestas al mes aguantarías en tu piso?",
+          "pitch": "+11Hz",
+          "rate": "+20%"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "theme": "cream",
+      "dur": 2.3,
+      "title": "Una al mes, *avisando*",
+      "sub": "Con fecha y hora de fin.",
+      "vo": [
+        {
+          "t": "El problema es que te enteras…",
+          "pitch": "-2Hz",
+          "rate": "+18%",
+          "pause": 0.12
+        },
+        {
+          "t": "¡cuando ya vives allí!",
+          "pitch": "-4Hz",
+          "rate": "+16%"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "theme": "sand",
+      "dur": 2.3,
+      "title": "Cada *finde*",
+      "sub": "Viernes y sábado, hasta las 4.",
+      "vo": [
+        {
+          "t": "Con Vive Conmigo lo sabes antes.",
+          "pitch": "+8Hz",
+          "rate": "+18%"
+        }
+      ]
+    },
+    {
+      "type": "item",
+      "theme": "ink",
+      "dur": 2.3,
+      "title": "También *entre semana*",
+      "sub": "Aunque tu compi tenga examen.",
+      "vo": [
+        {
+          "t": "Es la web de pisos compartidos donde conoces a la gente del piso antes de mudarte:",
+          "pitch": "+2Hz",
+          "rate": "+24%"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "theme": "rust",
+      "dur": 2.6,
+      "gap": 40,
+      "lines": [
+        {
+          "t": "Mi bando: la *1*.",
+          "size": 104
+        },
+        {
+          "t": "En Vive Conmigo ves si el piso es *fiestero* o *tranquilo* antes de mudarte.",
+          "sans": true,
+          "soft": true,
+          "size": 48,
+          "wait": 0.5
+        }
+      ],
+      "vo": [
+        {
+          "t": "si son de fiesta o tranquilos, si estudian o trabajan…",
+          "pitch": "+4Hz",
+          "rate": "+24%",
+          "pause": 0.12
+        },
+        {
+          "t": "y tu porcentaje de compatibilidad con cada uno.",
+          "pitch": "-3Hz",
+          "rate": "+18%"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "theme": "terra",
+      "dur": 3.0,
+      "title": "¿Tú eres *1*, *2* o *3*?",
+      "foot": "Comenta tu número y etiqueta a tu compi fiestero",
+      "size": 100,
+      "vo": [
+        {
+          "t": "Entra en vive conmigo punto es.",
+          "pitch": "+3Hz",
+          "rate": "+18%",
+          "pause": 0.2
+        },
+        {
+          "t": "¿Uno, dos o tres? ¡Comenta!",
+          "pitch": "+12Hz",
+          "rate": "+20%"
+        }
+      ]
+    }
+  ]
+}
