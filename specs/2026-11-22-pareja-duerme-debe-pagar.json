@@ -1,0 +1,147 @@
+{
+  "cover": {
+    "kicker": "Opinión impopular",
+    "title": "Si tu pareja duerme aquí, *paga*",
+    "theme": "rust",
+    "size": 112
+  },
+  "music": "loyalty-frea-let-s-be-serious-a-second",
+  "voice": {
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "+18%"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "theme": "ink",
+      "dur": 2.4,
+      "label": "Parejas en el piso",
+      "lines": [
+        {
+          "t": "Su *pareja* duerme aquí",
+          "size": 96
+        },
+        {
+          "t": "*4 noches* por semana.",
+          "size": 96,
+          "pop": true
+        },
+        {
+          "t": "¿Debería *pagar*?",
+          "sans": true,
+          "size": 60
+        }
+      ],
+      "vo": [
+        {
+          "t": "¿La pareja de tu compi prácticamente vive en tu piso?",
+          "pitch": "+11Hz",
+          "rate": "+20%"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "theme": "cream",
+      "dur": 3.0,
+      "label": "Opinión impopular",
+      "title": "Si duerme aquí más de *3 noches*, paga *su parte*.",
+      "size": 96,
+      "sub": "Luz, agua, ducha, sofá…",
+      "vo": [
+        {
+          "t": "Nadie lo habla antes de mudarse…",
+          "pitch": "-2Hz",
+          "rate": "+18%",
+          "pause": 0.12
+        },
+        {
+          "t": "¡y luego vienen los malos rollos!",
+          "pitch": "-4Hz",
+          "rate": "+18%"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "theme": "sand",
+      "dur": 3.4,
+      "label": "¿Ya es un compi más?",
+      "title": "Señales de que *vive aquí*",
+      "rows": [
+        {
+          "t": "Tiene *llaves*"
+        },
+        {
+          "t": "Se ducha cada mañana"
+        },
+        {
+          "t": "Su cepillo ya está en el baño"
+        },
+        {
+          "t": "Paga gastos",
+          "ok": false
+        }
+      ],
+      "vo": [
+        {
+          "t": "Con Vive Conmigo lo sabes antes de entrar.",
+          "pitch": "+8Hz",
+          "rate": "+20%",
+          "pause": 0.12
+        },
+        {
+          "t": "Es la web de pisos compartidos donde conoces a la gente del piso:",
+          "pitch": "+2Hz",
+          "rate": "+24%"
+        }
+      ]
+    },
+    {
+      "type": "poll",
+      "theme": "terra",
+      "dur": 3.4,
+      "label": "Tú decides",
+      "title": "¿Debe *pagar*?",
+      "options": [
+        "Sí, *su parte*",
+        "No, es una *visita*"
+      ],
+      "foot": "Comenta *A* o *B* 👇",
+      "vo": [
+        {
+          "t": "si reciben visitas, si son de fiesta, cómo limpian…",
+          "pitch": "+4Hz",
+          "rate": "+24%",
+          "pause": 0.12
+        },
+        {
+          "t": "y tu porcentaje de compatibilidad con cada uno.",
+          "pitch": "-3Hz",
+          "rate": "+18%"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "theme": "olive",
+      "dur": 3.0,
+      "title": "¿*Paga* o es *visita*?",
+      "foot": "Mándaselo a tu compi (y a su pareja)",
+      "size": 100,
+      "vo": [
+        {
+          "t": "Encuentra con quién encajas en vive conmigo punto es.",
+          "pitch": "+3Hz",
+          "rate": "+18%",
+          "pause": 0.2
+        },
+        {
+          "t": "¿A o B? ¡Comenta!",
+          "pitch": "+12Hz",
+          "rate": "+20%"
+        }
+      ]
+    }
+  ]
+}
