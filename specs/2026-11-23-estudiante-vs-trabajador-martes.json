@@ -1,0 +1,78 @@
+{
+  "cover": {
+    "kicker": "Estudiante vs trabajador",
+    "title": "Mismo piso, *horarios* al revés",
+    "theme": "terra",
+    "size": 112
+  },
+  "music": "loyalty-frea-yippee",
+  "voice": {
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "+18%"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "theme": "olive",
+      "dur": 2.4,
+      "label": "Nadie habla de esto",
+      "lines": [
+        { "t": "*Estudiante*", "size": 110 },
+        { "t": "vs *trabajador*", "size": 110, "pop": true },
+        { "t": "en el mismo piso.", "sans": true, "size": 60 }
+      ],
+      "vo": [
+        { "t": "¿Tú estudias… y tu compi trabaja?", "pitch": "+11Hz", "rate": "+20%" }
+      ]
+    },
+    {
+      "type": "versus",
+      "theme": "cream",
+      "dur": 3.4,
+      "title": "Martes, *7:30*",
+      "left": { "label": "Estudiante", "items": ["Durmiendo", "Clase a las 12… quizá"] },
+      "right": { "label": "Trabajador", "items": ["Ducha, café, tupper", "Puerta a las 7:45"] },
+      "vo": [
+        { "t": "Horarios opuestos…", "pitch": "+4Hz", "rate": "+18%", "pause": 0.12 },
+        { "t": "¡y te enteras el primer martes!", "pitch": "-3Hz", "rate": "+20%" }
+      ]
+    },
+    {
+      "type": "versus",
+      "theme": "ink",
+      "dur": 3.4,
+      "title": "Martes, *00:30*",
+      "left": { "label": "Estudiante", "items": ["Trabajo en grupo en el salón", "«Mañana no tengo clase»"] },
+      "right": { "label": "Trabajador", "items": ["Intentando dormir", "Alarma a las 6:45"] },
+      "vo": [
+        { "t": "Con Vive Conmigo lo sabes antes.", "pitch": "+8Hz", "rate": "+20%", "pause": 0.12 },
+        { "t": "Es la web de pisos compartidos donde ves cómo es la gente del piso:", "pitch": "+2Hz", "rate": "+24%" }
+      ]
+    },
+    {
+      "type": "poll",
+      "theme": "sand",
+      "dur": 3.4,
+      "label": "Tú decides",
+      "title": "¿Pueden vivir *juntos*?",
+      "options": ["Sí, con *normas*", "No, *imposible*"],
+      "foot": "Comenta *A* o *B* 👇",
+      "vo": [
+        { "t": "si estudian o trabajan, sus horarios, si son de fiesta…", "pitch": "+4Hz", "rate": "+24%", "pause": 0.12 },
+        { "t": "y tu porcentaje de compatibilidad con cada uno.", "pitch": "-3Hz", "rate": "+18%" }
+      ]
+    },
+    {
+      "type": "cta",
+      "theme": "terra",
+      "dur": 3.0,
+      "title": "Mira sus *horarios* antes de mudarte",
+      "foot": "Etiqueta a tu compi del horario al revés",
+      "size": 96,
+      "vo": [
+        { "t": "Busca tu habitación en vive conmigo punto es.", "pitch": "+3Hz", "rate": "+18%", "pause": 0.2 },
+        { "t": "¿Se puede o no? ¡Comenta!", "pitch": "+12Hz", "rate": "+20%" }
+      ]
+    }
+  ]
+}
