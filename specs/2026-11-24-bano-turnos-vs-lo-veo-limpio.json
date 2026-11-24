@@ -1,0 +1,84 @@
+{
+  "cover": {
+    "kicker": "Limpieza: ¿quién tiene razón?",
+    "title": "«Yo el baño lo veo *limpio*»",
+    "theme": "olive",
+    "size": 108
+  },
+  "music": "holiznacc0-toy-box",
+  "voice": {
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "+18%"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "theme": "rust",
+      "dur": 2.4,
+      "label": "Si tu compi dice esto…",
+      "lines": [
+        { "t": "«Yo el baño", "size": 112 },
+        { "t": "lo veo *limpio*»", "size": 112, "pop": true },
+        { "t": "(lleva 3 semanas sin limpiarse)", "sans": true, "size": 52 }
+      ],
+      "vo": [
+        { "t": "¿Para ti qué es un baño limpio?", "pitch": "+11Hz", "rate": "+20%" }
+      ]
+    },
+    {
+      "type": "chat",
+      "theme": "cream",
+      "dur": 5.0,
+      "label": "Grupo del piso",
+      "msgs": [
+        { "from": "them", "t": "¿A quién le toca el baño esta semana?" },
+        { "from": "me", "t": "Yo lo veo bien, la verdad" },
+        { "from": "them", "t": "Hay pelos en el lavabo…" },
+        { "from": "me", "t": "Eso no es suciedad, es vida" }
+      ],
+      "vo": [
+        { "t": "Porque lo que para uno es limpio…", "pitch": "+4Hz", "rate": "+20%", "pause": 0.12 },
+        { "t": "para otro es una guerra.", "pitch": "-3Hz", "rate": "+18%", "pause": 0.15 },
+        { "t": "¡Y nadie lo pregunta antes de mudarse!", "pitch": "+6Hz", "rate": "+22%" }
+      ]
+    },
+    {
+      "type": "poll",
+      "theme": "ink",
+      "dur": 4.0,
+      "label": "Convivencia A o B",
+      "title": "¿Cómo se *limpia* el baño?",
+      "options": ["*Turnos* fijos cada semana", "El que lo ve *sucio*, lo limpia"],
+      "foot": "Comenta *A* o *B*",
+      "vo": [
+        { "t": "En Vive Conmigo lo ves antes.", "pitch": "+8Hz", "rate": "+20%", "pause": 0.12 },
+        { "t": "Es la web de pisos compartidos donde conoces a tus futuros compis:", "pitch": "+2Hz", "rate": "+24%", "pause": 0.1 },
+        { "t": "cómo limpian, si fuman, sus horarios…", "pitch": "+4Hz", "rate": "+24%" }
+      ]
+    },
+    {
+      "type": "chips",
+      "theme": "sand",
+      "dur": 4.0,
+      "label": "Antes de mudarte",
+      "title": "Mira cómo *limpia* el piso",
+      "chips": ["Limpieza", "Turnos", "Fuma o no", "Horarios", "% de compatibilidad"],
+      "foot": "Mándaselo a tu compi del «yo lo veo limpio»",
+      "vo": [
+        { "t": "y tu porcentaje de compatibilidad con cada uno.", "pitch": "-3Hz", "rate": "+18%" }
+      ]
+    },
+    {
+      "type": "cta",
+      "theme": "terra",
+      "dur": 3.0,
+      "title": "¿Turnos o *el que lo ve*?",
+      "foot": "Mira cómo limpian antes de mudarte",
+      "size": 92,
+      "vo": [
+        { "t": "Encuentra con quién encajas en vive conmigo punto es.", "pitch": "+3Hz", "rate": "+18%", "pause": 0.2 },
+        { "t": "¿A o B? ¡Comenta!", "pitch": "+12Hz", "rate": "+20%" }
+      ]
+    }
+  ]
+}
