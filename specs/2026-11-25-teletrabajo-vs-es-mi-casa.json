@@ -1,0 +1,157 @@
+{
+  "cover": {
+    "kicker": "Teletrabajo: ¿quién cede?",
+    "title": "Tú en una *llamada*. Tu compi, con música",
+    "theme": "terra",
+    "size": 100
+  },
+  "music": "holiznacc0-re-adusjtment",
+  "voice": {
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "+18%"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "theme": "ink",
+      "dur": 2.4,
+      "label": "Martes, 11:00",
+      "lines": [
+        {
+          "t": "Tú: llamada",
+          "size": 112
+        },
+        {
+          "t": "de *trabajo*",
+          "size": 112,
+          "pop": true
+        },
+        {
+          "t": "Tu compi: altavoz a tope en el salón",
+          "sans": true,
+          "size": 52
+        }
+      ],
+      "vo": [
+        {
+          "t": "¿Teletrabajas… y tu compi pone música a tope?",
+          "pitch": "+11Hz",
+          "rate": "+20%"
+        }
+      ]
+    },
+    {
+      "type": "versus",
+      "theme": "cream",
+      "dur": 4.0,
+      "title": "¿Quién tiene *razón*?",
+      "left": {
+        "label": "Teletrabaja",
+        "items": [
+          "Silencio de 9 a 18",
+          "Llamadas en el salón",
+          "«Estoy trabajando»"
+        ]
+      },
+      "right": {
+        "label": "Estudia / libra",
+        "items": [
+          "«Es mi casa también»",
+          "Música sin cascos",
+          "«No es una oficina»"
+        ]
+      },
+      "vo": [
+        {
+          "t": "Esto no se habla en la visita…",
+          "pitch": "+4Hz",
+          "rate": "+20%",
+          "pause": 0.12
+        },
+        {
+          "t": "y te enteras el primer lunes.",
+          "pitch": "-3Hz",
+          "rate": "+18%"
+        }
+      ]
+    },
+    {
+      "type": "profile",
+      "theme": "sand",
+      "dur": 4.4,
+      "title": "Míralo *antes* de mudarte",
+      "name": "Lucía, 26",
+      "tag": "Teletrabaja · tranquila",
+      "pct": 87,
+      "rows": [
+        {
+          "good": true,
+          "k": "Trabajo",
+          "v": "Desde casa, de 9 a 17"
+        },
+        {
+          "good": true,
+          "k": "Ruido",
+          "v": "Prefiere silencio de día"
+        },
+        {
+          "good": false,
+          "k": "Horarios",
+          "v": "Se acuesta pronto"
+        }
+      ],
+      "vo": [
+        {
+          "t": "Con Vive Conmigo lo sabes antes.",
+          "pitch": "+8Hz",
+          "rate": "+20%",
+          "pause": 0.12
+        },
+        {
+          "t": "Ves si tus futuros compis teletrabajan, estudian o salen de fiesta…",
+          "pitch": "+2Hz",
+          "rate": "+24%",
+          "pause": 0.1
+        },
+        {
+          "t": "y tu porcentaje de compatibilidad con cada uno.",
+          "pitch": "-3Hz",
+          "rate": "+18%"
+        }
+      ]
+    },
+    {
+      "type": "poll",
+      "theme": "olive",
+      "dur": 3.4,
+      "label": "Convivencia A o B",
+      "title": "En horario de *trabajo*…",
+      "options": [
+        "*Silencio* en casa",
+        "Que se ponga *cascos*"
+      ],
+      "foot": "Comenta *A* o *B* · Etiqueta a tu compi",
+      "vo": [
+        {
+          "t": "Busca tu habitación en vive conmigo punto es.",
+          "pitch": "+3Hz",
+          "rate": "+18%",
+          "pause": 0.15
+        },
+        {
+          "t": "¿Silencio o cascos? ¡Comenta!",
+          "pitch": "+12Hz",
+          "rate": "+20%"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "theme": "rust",
+      "dur": 2.6,
+      "title": "¿Silencio o *cascos*?",
+      "foot": "Mira con quién encajas en vive-conmigo.es",
+      "size": 96
+    }
+  ]
+}
