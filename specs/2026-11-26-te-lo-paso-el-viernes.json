@@ -1,0 +1,155 @@
+{
+  "cover": {
+    "kicker": "Red flags del dinero",
+    "title": "«Te lo paso el *viernes*»",
+    "theme": "sand",
+    "size": 108
+  },
+  "music": "loyalty-frea-i-m-on-fire",
+  "voice": {
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "+18%"
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "theme": "terra",
+      "dur": 2.4,
+      "label": "Si tu compi dice esto…",
+      "lines": [
+        {
+          "t": "«Te lo paso",
+          "size": 116
+        },
+        {
+          "t": "el *viernes*»",
+          "size": 116,
+          "pop": true
+        },
+        {
+          "t": "(lo dice desde septiembre)",
+          "sans": true,
+          "size": 52
+        }
+      ],
+      "vo": [
+        {
+          "t": "¿Tu compi siempre te paga… «el viernes»?",
+          "pitch": "+11Hz",
+          "rate": "+20%"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "theme": "cream",
+      "dur": 3.6,
+      "label": "Red flags del dinero",
+      "title": "Señales de que *no paga*",
+      "rows": [
+        {
+          "t": "El alquiler, «un poco tarde»",
+          "ok": false
+        },
+        {
+          "t": "La luz: «¿cuánto era?»",
+          "ok": false
+        },
+        {
+          "t": "Desaparece con la *factura*",
+          "ok": false
+        },
+        {
+          "t": "Bizum el mismo día"
+        }
+      ],
+      "vo": [
+        {
+          "t": "Esto nadie lo pregunta en la visita…",
+          "pitch": "+4Hz",
+          "rate": "+20%",
+          "pause": 0.12
+        },
+        {
+          "t": "y lo descubres con la primera factura.",
+          "pitch": "-3Hz",
+          "rate": "+18%"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "theme": "ink",
+      "dur": 3.2,
+      "gap": 36,
+      "lines": [
+        {
+          "t": "*A*: si no paga a tiempo, fuera.",
+          "size": 84
+        },
+        {
+          "t": "*B*: un retraso lo tiene cualquiera.",
+          "size": 84,
+          "wait": 0.6
+        }
+      ],
+      "vo": [
+        {
+          "t": "¡Con Vive Conmigo conoces a la gente del piso antes de mudarte!",
+          "pitch": "+8Hz",
+          "rate": "+22%",
+          "pause": 0.12
+        }
+      ]
+    },
+    {
+      "type": "chips",
+      "theme": "sand",
+      "dur": 3.6,
+      "label": "Míralo antes de mudarte",
+      "title": "Así es la gente del *piso*",
+      "chips": [
+        "Estudia o trabaja",
+        "Fuma o no",
+        "Fiestero o tranquilo",
+        "Cómo limpia",
+        "Horarios",
+        "% de compatibilidad"
+      ],
+      "vo": [
+        {
+          "t": "Si estudian o trabajan, si son de fiesta, cómo limpian…",
+          "pitch": "+2Hz",
+          "rate": "+24%",
+          "pause": 0.1
+        },
+        {
+          "t": "y tu porcentaje de compatibilidad con cada uno.",
+          "pitch": "-3Hz",
+          "rate": "+18%"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "theme": "olive",
+      "dur": 3.0,
+      "title": "¿Bando *A* o bando *B*?",
+      "foot": "Comenta y mándaselo a tu compi del «viernes»",
+      "size": 100,
+      "vo": [
+        {
+          "t": "Elige bien en vive conmigo punto es.",
+          "pitch": "+3Hz",
+          "rate": "+18%",
+          "pause": 0.15
+        },
+        {
+          "t": "¿Bando A o B? ¡Comenta!",
+          "pitch": "+12Hz",
+          "rate": "+20%"
+        }
+      ]
+    }
+  ]
+}
