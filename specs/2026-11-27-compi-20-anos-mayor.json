@@ -1,0 +1,58 @@
+{
+  "cover": {
+    "kicker": "A o B",
+    "title": "¿Vivirías con alguien *20 años* mayor?",
+    "theme": "ink",
+    "size": 104
+  },
+  "music": "loyalty-frea-enby",
+  "voice": { "voice": "es-ES-AlvaroNeural", "rate": "+18%" },
+  "scenes": [
+    {
+      "type": "hook", "theme": "rust", "dur": 2.4, "label": "POV:",
+      "lines": [
+        { "t": "Tienes *20* años.", "size": 112 },
+        { "t": "Tu nuevo compi, *40*.", "size": 112, "pop": true },
+        { "t": "(te enteras el día de la mudanza)", "sans": true, "size": 50 }
+      ],
+      "vo": [ { "t": "¿Y si tu nuevo compi te saca veinte años… y te enteras al llegar?", "pitch": "+11Hz", "rate": "+22%" } ]
+    },
+    {
+      "type": "poll", "theme": "cream", "dur": 3.4, "label": "A o B",
+      "title": "¿Compartirías piso con alguien *mucho mayor*?",
+      "options": ["Solo con gente de mi edad", "Si encajamos, me da igual"],
+      "foot": "Comenta A o B",
+      "vo": [
+        { "t": "Nadie lo pregunta antes de mudarse…", "pitch": "+4Hz", "rate": "+20%", "pause": 0.12 },
+        { "t": "y luego chocan horarios, visitas y ruido.", "pitch": "-3Hz", "rate": "+20%" }
+      ]
+    },
+    {
+      "type": "text", "theme": "ink", "dur": 2.8, "gap": 36,
+      "lines": [
+        { "t": "La edad *no* es el problema.", "size": 88 },
+        { "t": "El problema es *no saberlo* antes.", "size": 88, "wait": 0.6 }
+      ],
+      "vo": [ { "t": "¡Vive Conmigo es la web de pisos compartidos donde conoces a tus compis antes de mudarte!", "pitch": "+8Hz", "rate": "+22%" } ]
+    },
+    {
+      "type": "chips", "theme": "olive", "dur": 3.6, "label": "En cada piso ves",
+      "title": "Quién vive *ahí*",
+      "chips": ["Edad", "Estudia o trabaja", "Horarios", "Fiesta o tranquilo", "Cómo limpia", "% de compatibilidad"],
+      "vo": [
+        { "t": "Su edad, si estudian o trabajan, sus horarios…", "pitch": "+2Hz", "rate": "+24%", "pause": 0.1 },
+        { "t": "y tu porcentaje de compatibilidad con cada uno.", "pitch": "-3Hz", "rate": "+18%" }
+      ]
+    },
+    {
+      "type": "cta", "theme": "sand", "dur": 3.0,
+      "title": "¿Equipo *A* o equipo *B*?",
+      "foot": "Comenta y mándaselo a tu compi",
+      "size": 100,
+      "vo": [
+        { "t": "Busca tu habitación en vive conmigo punto es.", "pitch": "+3Hz", "rate": "+18%", "pause": 0.15 },
+        { "t": "¿A o B? ¡Comenta!", "pitch": "+12Hz", "rate": "+20%" }
+      ]
+    }
+  ]
+}
