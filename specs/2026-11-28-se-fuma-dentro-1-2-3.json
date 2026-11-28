@@ -1,0 +1,62 @@
+{
+  "cover": {
+    "kicker": "Fumador vs no fumador",
+    "title": "¿Se puede fumar *dentro* del piso?",
+    "theme": "cream",
+    "size": 108
+  },
+  "music": "loyalty-frea-sweat-time",
+  "voice": { "voice": "es-ES-AlvaroNeural", "rate": "+18%" },
+  "scenes": [
+    {
+      "type": "hook", "theme": "olive", "dur": 2.4, "label": "Nadie lo pregunta en la visita",
+      "lines": [
+        { "t": "¿En tu piso", "size": 112 },
+        { "t": "se fuma", "size": 112 },
+        { "t": "*dentro*?", "size": 124, "pop": true },
+        { "t": "Elige: 1, 2 o 3.", "sans": true, "size": 52 }
+      ],
+      "vo": [ { "t": "¿Fumador o no fumador? ¡Esto decide si podéis vivir juntos!", "pitch": "+11Hz", "rate": "+22%" } ]
+    },
+    {
+      "type": "item", "theme": "cream", "dur": 2.3,
+      "title": "Libre de *humo*",
+      "sub": "Ni dentro ni en el balcón.",
+      "vo": [
+        { "t": "Y casi siempre te enteras tarde…", "pitch": "-2Hz", "rate": "+18%", "pause": 0.12 },
+        { "t": "¡con la maleta ya deshecha!", "pitch": "-4Hz", "rate": "+18%" }
+      ]
+    },
+    {
+      "type": "item", "theme": "sand", "dur": 2.3,
+      "title": "Solo en el *balcón*",
+      "sub": "Con la puerta cerrada.",
+      "vo": [ { "t": "Por eso existe Vive Conmigo.", "pitch": "+8Hz", "rate": "+18%" } ]
+    },
+    {
+      "type": "item", "theme": "ink", "dur": 2.3,
+      "title": "Cada uno en su *cuarto*",
+      "sub": "Ventana abierta y listo.",
+      "vo": [ { "t": "La web de pisos compartidos donde ves cómo es la gente del piso antes de mudarte:", "pitch": "+2Hz", "rate": "+24%" } ]
+    },
+    {
+      "type": "chips", "theme": "terra", "dur": 3.6, "label": "Antes de mudarte ves",
+      "title": "Si en el piso se *fuma*",
+      "chips": ["Fuma o no fuma", "Fiesta o tranquilo", "Mascotas", "Horarios", "Cómo limpia", "% de compatibilidad"],
+      "vo": [
+        { "t": "si fuman, si son de fiesta, si tienen mascotas…", "pitch": "+4Hz", "rate": "+24%", "pause": 0.1 },
+        { "t": "y tu porcentaje de compatibilidad con cada uno.", "pitch": "-3Hz", "rate": "+18%" }
+      ]
+    },
+    {
+      "type": "cta", "theme": "rust", "dur": 3.0,
+      "title": "¿Tu piso es *1*, *2* o *3*?",
+      "foot": "Comenta tu número y mándaselo a tu compi fumador",
+      "size": 100,
+      "vo": [
+        { "t": "Encuentra con quién encajas en vive conmigo punto es.", "pitch": "+3Hz", "rate": "+18%", "pause": 0.15 },
+        { "t": "¿Uno, dos o tres? ¡Comenta!", "pitch": "+12Hz", "rate": "+20%" }
+      ]
+    }
+  ]
+}
